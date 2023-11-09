@@ -1,5 +1,5 @@
 import myPhoto from '../../../assets/images/myPhoto.webp'
-import { FlexWrapper } from '../../../components/flexWrapper/FlexWrapper'
+import { FlexWrapper } from '../../../components/FlexWrapper'
 import styled from 'styled-components'
 
 export function Main() {
@@ -18,7 +18,7 @@ export function Main() {
    )
 }
 
-const StyledMain = styled.div`
+const StyledMain = styled.section`
    background-color: #1F1F1F;
 `
 const MainGreeting = styled.span`

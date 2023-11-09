@@ -1,5 +1,5 @@
 import React from 'react'
-import { FlexWrapper } from '../../../components/flexWrapper/FlexWrapper'
+import { FlexWrapper } from '../../../components/FlexWrapper'
 import styled from 'styled-components'
 import myPhoto from '../../../assets/images/myPhoto.webp'
 
@@ -19,7 +19,7 @@ export function About() {
    )
 }
 
-const StyledAbout = styled.div`
+const StyledAbout = styled.section`
    background-color: #2B2A2A;
 `
 
