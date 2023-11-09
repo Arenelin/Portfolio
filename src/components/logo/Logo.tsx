@@ -1,10 +1,15 @@
 import React from 'react'
 import { Icon } from '../icon/Icon'
+import styled from 'styled-components'
 
 export function Logo() {
    return (
       <a href="">
-         <span>Nikita Akmaykin</span>
+         <LogoName>Nikita Akmaykin</LogoName>
       </a>
    )
 }
+
+const LogoName = styled.span`
+   
+`

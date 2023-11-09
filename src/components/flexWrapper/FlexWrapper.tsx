@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 
 type FlexWrapperPropsType = {
@@ -10,7 +9,8 @@ type FlexWrapperPropsType = {
 
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
    display: flex;
-   justify-content: ${props => props.jsc || 'stretch'};
+   justify-content: ${props => props.jsc || 'flex-start'};
    align-items: ${props => props.ai || 'stretch'};
-   flex-direction: ${props => props.direction || 'row'}
+   flex-direction: ${props => props.direction || 'row'};
+   flex-wrap: ${props => props.wrap || 'nowrap'}; 
 `

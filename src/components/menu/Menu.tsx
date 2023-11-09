@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 
 export function Menu() {
@@ -26,8 +25,9 @@ export function Menu() {
 }
 
 const StyledMenu = styled.nav`
+
 ul{
-      display: flex;
+   display: flex;
    gap: 30px;
 }
 
