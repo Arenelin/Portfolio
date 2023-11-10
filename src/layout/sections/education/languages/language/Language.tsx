@@ -7,10 +7,6 @@ type LanguagePropsType = {
    percent: string
 }
 
-type ProgressLinePropsType = {
-   percent: string
-}
-
 export function Language(props: LanguagePropsType) {
    return (
       <StyledLanguage>
@@ -26,10 +22,10 @@ const StyledLanguage = styled.div`
 
 `
 
-const ProgressLine = styled.div<ProgressLinePropsType>`
+const ProgressLine = styled.div<{ percent: string }>`
    position: relative;
    height: 25px;
-   border-radius: 15px;
+   border-radius: 50px;
    background: linear-gradient(90deg, #3C1DFF 18.63%, #14C9C9 78.88%);
    width: ${props => props.percent};
 
