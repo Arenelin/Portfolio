@@ -22,5 +22,5 @@ export function Skills() {
 }
 
 const StyledSkills = styled.section`
-   background-color: #b3aaaa;
+   background-color: #1F1F1F;
 `
