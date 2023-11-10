@@ -6,7 +6,8 @@ export function Studies() {
   return (
      <StyledStudies>
         <SectionTitle>Studies</SectionTitle>
-        <Organization/>
+        <Organization name={'Medical College'} year={'2022'} />
+        <Organization name={'IT-INCUBATOR'} year={'2024'} />
     </StyledStudies>
   )
 }

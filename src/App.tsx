@@ -13,7 +13,7 @@ function App() {
             <Main />
             <About />
             <Skills />
-            <Education/>
+            <Education />
         </div>
     );
 }

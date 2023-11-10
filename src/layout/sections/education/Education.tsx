@@ -6,7 +6,7 @@ import { Studies } from './studies/Studies'
 export function Education() {
    return (
       <StyledEducation>
-         <FlexWrapper jsc='space-between'>
+         <FlexWrapper jsc='space-around' ai='center'>
             <Languages />
             <Studies/>
          </FlexWrapper>
@@ -15,5 +15,5 @@ export function Education() {
 }
 
 const StyledEducation = styled.section`
-   background-color: #bebbbb;
+   background-color: #1f1f1f;
 `
