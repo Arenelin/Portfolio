@@ -5,7 +5,7 @@ import styled from 'styled-components'
 export function Main() {
    return (
       <StyledMain>
-         <FlexWrapper jsc={'space-around'} ai={'center'}>
+         <FlexWrapper jc={'space-around'} ai={'center'}>
             <div>
                <MainGreeting>Welcome</MainGreeting>
                <MainName>I am Nikita Akmaykin</MainName>

@@ -5,6 +5,7 @@ import { About } from './layout/sections/about/About';
 import { Skills } from './layout/sections/skills/Skills';
 import { Education } from './layout/sections/education/Education';
 import { Projects } from './layout/sections/projects/Projects';
+import { Quote } from './layout/sections/quote/Quote';
 
 
 function App() {
@@ -15,9 +16,14 @@ function App() {
             <About />
             <Skills />
             <Education />
-            <Projects/>
+            <Projects />
+            <Quote/>
         </div>
     );
 }
 
 export default App;
+
+//colors: 
+// #6658F0
+// #9B90FB

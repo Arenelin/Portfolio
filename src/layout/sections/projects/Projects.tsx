@@ -8,7 +8,7 @@ export function Projects() {
   return (
      <StyledProjects>
         <SectionTitle>Projects</SectionTitle>
-        <FlexWrapper jsc='center' wrap='wrap'>
+        <FlexWrapper jc='center' wrap='wrap'>
            {data.map(project => 
               <Project
                  key={project.id}

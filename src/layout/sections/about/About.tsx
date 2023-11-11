@@ -6,7 +6,7 @@ import myPhoto from '../../../assets/images/myPhoto.webp'
 export function About() {
    return (
       <StyledAbout>
-         <FlexWrapper jsc={'space-around'} ai={'center'}>
+         <FlexWrapper jc={'space-around'} ai={'center'}>
             <AboutPhoto src={myPhoto} alt='Photo'/>
             <AboutInfo>
                <AboutTitle>About me</AboutTitle>

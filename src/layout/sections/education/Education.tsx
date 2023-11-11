@@ -6,7 +6,7 @@ import { Studies } from './studies/Studies'
 export function Education() {
    return (
       <StyledEducation>
-         <FlexWrapper jsc='space-around' ai='center'>
+         <FlexWrapper jc='space-around' ai='center'>
             <Languages />
             <Studies/>
          </FlexWrapper>
