@@ -27,7 +27,7 @@ const ProgressLine = styled.div<{ percent: string }>`
    height: 25px;
    border-radius: 50px;
    background: linear-gradient(90deg, #3C1DFF 18.63%, #14C9C9 78.88%);
-   width: ${props => props.percent};
+   max-width: ${props => props.percent};
 
    span{
       position: absolute;

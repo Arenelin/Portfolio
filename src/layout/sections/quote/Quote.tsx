@@ -11,7 +11,7 @@ export function Quote() {
             <Icon iconId='quoteSecond' w='385' h='321' viewBox='0 0 385 321' />
             <QuoteInfo
                title={'quote of the day'}
-               text={'“Success is not final; failure is not fatal: it is the courage to continue that counts.”'}
+               text={'“Success is not final; failure is not fatal: it is the courage to continue that counts.”'} 
                author={'-Winston Churchill'} />
             {/* need to change it! */}
             <Test> 
@@ -27,6 +27,7 @@ const StyledQuote = styled.section`
 background-color: #111;
 max-width:1920px;
 margin: 0 auto;
+
 ${SectionTitle}{
 color: #EAEAEA;
 text-align: center;

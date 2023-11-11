@@ -25,6 +25,7 @@ const StyledOrganization = styled.div`
   display: flex;
   margin-bottom: 20px;
 `
+
 const Circle = styled.div`
   border-radius: 50%;
   width: 96px;

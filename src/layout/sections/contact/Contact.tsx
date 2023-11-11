@@ -8,9 +8,9 @@ export function Contact() {
      <StyledContact>
         <SectionTitle>Send me a message, I will be touch with you shortly.</SectionTitle>
         <FlexWrapper jc='space-around'>
-          <StyledForm action='#'>
-           <Field placeholder='Your Name'/>
-           <Field placeholder='Your Email Address' type='email'/>
+          <StyledForm action=''>
+           <Field placeholder='Your Name' type='text' name='userName'/>
+           <Field placeholder='Your Email Address' type='email' name='userEmail'/>
            <Field placeholder='Your Message' as={'textarea'} />
            <Button type='submit'>Send Message</Button>
            </StyledForm> 
@@ -23,7 +23,6 @@ export function Contact() {
 const StyledContact = styled.section`
 text-align: center;
 background-color:#1f1f1f;
-
 `
 
 const StyledForm = styled.form`

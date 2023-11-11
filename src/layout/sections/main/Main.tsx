@@ -1,4 +1,5 @@
 import myPhoto from '../../../assets/images/myPhoto.webp'
+import { Button } from '../../../components/Button'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import styled from 'styled-components'
 
@@ -6,11 +7,12 @@ export function Main() {
    return (
       <StyledMain>
          <FlexWrapper jc={'space-around'} ai={'center'}>
-            <div>
+            <MainInfo>
                <MainGreeting>Welcome</MainGreeting>
                <MainName>I am Nikita Akmaykin</MainName>
                <MainTitle>A Frontend Developer</MainTitle>
-            </div>
+               <Button>Download CV</Button>
+            </MainInfo>
             <MainPhoto src={myPhoto} alt="Photo" />
          </FlexWrapper>
       </StyledMain>
@@ -21,6 +23,10 @@ export function Main() {
 const StyledMain = styled.section`
    background-color: #1F1F1F;
 `
+const MainInfo = styled.div`
+
+`
+
 const MainGreeting = styled.span`
 
 `
