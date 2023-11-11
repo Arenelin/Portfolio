@@ -6,6 +6,7 @@ import { Skills } from './layout/sections/skills/Skills';
 import { Education } from './layout/sections/education/Education';
 import { Projects } from './layout/sections/projects/Projects';
 import { Quote } from './layout/sections/quote/Quote';
+import { Contact } from './layout/sections/contact/Contact';
 
 
 function App() {
@@ -17,13 +18,18 @@ function App() {
             <Skills />
             <Education />
             <Projects />
-            <Quote/>
+            <Quote />
+            <Contact/>
         </div>
     );
 }
+
+//Block Contact + Map
 
 export default App;
 
 //colors: 
 // #6658F0
 // #9B90FB
+
+//add Theme
