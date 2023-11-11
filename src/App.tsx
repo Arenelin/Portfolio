@@ -7,7 +7,7 @@ import { Education } from './layout/sections/education/Education';
 import { Projects } from './layout/sections/projects/Projects';
 import { Quote } from './layout/sections/quote/Quote';
 import { Contact } from './layout/sections/contact/Contact';
-
+import { Footer } from './layout/footer/Footer';
 
 function App() {
     return (
@@ -19,12 +19,11 @@ function App() {
             <Education />
             <Projects />
             <Quote />
-            <Contact/>
+            <Contact />
+            <Footer/>
         </div>
     );
 }
-
-//Block Contact + Map
 
 export default App;
 
