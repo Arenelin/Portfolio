@@ -4,10 +4,6 @@ export const data = [
       iconId: 'githubSocial'
    },
    {
-      id: 'ergqwergqerg',
-      iconId: 'discord'
-   },
-   {
       id: 'rwejqetyyukwpe',
       iconId: 'instagram'
    },
@@ -22,6 +18,10 @@ export const data = [
    {
       id: 'ertvca',
       iconId: 'vk'
+   },
+   {
+      id: 'ergqerg',
+      iconId: 'test'
    },
 ]
 

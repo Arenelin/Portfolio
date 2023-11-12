@@ -23,3 +23,4 @@ export function Skills() {
 const StyledSkills = styled.section`
    background-color: #1F1F1F;
 `
+//make a reverse card with information

@@ -39,7 +39,7 @@ const StyledMap = styled.div`
 color:#ffffff;
 flex-basis:500px;
 margin-bottom: 50px;
-height: 300px;
+min-height: 300px;
 display: flex;
 justify-content: center;
 align-items: center;
