@@ -4,10 +4,6 @@ export const data = [
       iconId: 'githubSocial'
    },
    {
-      id: 'rwejqetyyukwpe',
-      iconId: 'instagram'
-   },
-   {
       id: 'utiltuil',
       iconId: 'linkedin'
    },
@@ -16,13 +12,9 @@ export const data = [
       iconId: 'telegram'
    },
    {
-      id: 'ertvca',
-      iconId: 'vk'
-   },
-   {
-      id: 'ergqerg',
-      iconId: 'test'
+      id: 'rwejqetyyukwpe',
+      iconId: 'instagram'
    },
 ]
 
-//Добавить поле для ссылок в каждом объекте, чтобы пропсом прокинуть их в ссылку
+//Добавить поле для ссылок в каждом объекте, чтобы пропсом прокинуть их в ссылку href

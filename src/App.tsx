@@ -9,9 +9,6 @@ import { Quote } from './layout/sections/quote/Quote';
 import { Contact } from './layout/sections/contact/Contact';
 import { Footer } from './layout/footer/Footer';
 
-
-
-
 function App() {
     return (
         <div className="App">
