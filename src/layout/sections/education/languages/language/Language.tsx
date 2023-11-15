@@ -10,10 +10,15 @@ type LanguagePropsType = {
 export function Language(props: LanguagePropsType) {
    return (
       <StyledLanguage>
-         <EducationTitle>{props.name}</EducationTitle>
-         <ProgressLine percent={props.percent}>
+
+         <div>
+            <EducationTitle>{props.name}</EducationTitle>
             <span>{props.level}</span>
-         </ProgressLine>
+         </div>
+         {/* <Progress> */}
+            <ProgressLine percent={props.percent} />
+         {/* </Progress> */}
+
       </StyledLanguage>
    )
 }
