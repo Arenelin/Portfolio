@@ -1,3 +1,4 @@
+import { theme } from '../../../../../styles/Theme'
 import { EducationTitle } from '../../EducationTitle'
 import styled from 'styled-components'
 
@@ -10,15 +11,13 @@ type LanguagePropsType = {
 export function Language(props: LanguagePropsType) {
    return (
       <StyledLanguage>
-
-         <div>
+         <WrapperLanguageTitle percent={props.percent}>
             <EducationTitle>{props.name}</EducationTitle>
-            <span>{props.level}</span>
-         </div>
-         {/* <Progress> */}
+            <LanguageLevel>{props.level}</LanguageLevel>
+         </WrapperLanguageTitle>
+         <Progress>
             <ProgressLine percent={props.percent} />
-         {/* </Progress> */}
-
+         </Progress>
       </StyledLanguage>
    )
 }
@@ -26,17 +25,31 @@ export function Language(props: LanguagePropsType) {
 const StyledLanguage = styled.div`
 
 `
+const WrapperLanguageTitle = styled.div<{ percent: string }>`
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: ${props => props.percent};
+` 
+
+const LanguageLevel = styled.span`
+padding-left: 10px;
+font-weight: 600;
+letter-spacing: 0.725px;
+text-transform: capitalize;
+`
+
+const Progress = styled.div`
+width: 100%;
+border: 1px solid ${theme.colors.font};
+border-radius: 50px;
+height: 25px;
+margin-bottom: 20px;
+`
 
 const ProgressLine = styled.div<{ percent: string }>`
-   position: relative;
-   height: 25px;
-   border-radius: 50px;
-   background: linear-gradient(90deg, #3C1DFF 18.63%, #14C9C9 78.88%);
-   max-width: ${props => props.percent};
-
-   span{
-      position: absolute;
-      top: -25px;
-      right: 10px;
-   }
+height: 100%;
+border-radius: 50px;
+background: linear-gradient(180deg, ${theme.colors.accentSecondary}, ${theme.colors.accentPrimary});
+max-width: ${props => props.percent};
 `

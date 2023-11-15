@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 import { EducationTitle } from '../../EducationTitle'
 import { Icon } from '../../../../../components/icon/Icon'
+import { theme } from '../../../../../styles/Theme'
 
 type OrganizationPropsType = {
   name: string,
-  year: string
+  years: string
 }
 
 export function Organization(props: OrganizationPropsType) {
@@ -15,7 +16,7 @@ export function Organization(props: OrganizationPropsType) {
       </Circle>
       <OrganizationInfo>
         <EducationTitle>{props.name}</EducationTitle>
-        <span>{props.year}</span>
+        <OrganizationYear>{props.years}</OrganizationYear>
       </OrganizationInfo>
     </StyledOrganization>
   )
@@ -23,14 +24,16 @@ export function Organization(props: OrganizationPropsType) {
 
 const StyledOrganization = styled.div`
   display: flex;
-  margin-bottom: 20px;
+  align-items: center;  
+  margin-bottom: 25px;
+  width: 100%;
 `
 
 const Circle = styled.div`
   border-radius: 50%;
   width: 96px;
   height: 96px;
-  background: linear-gradient(180deg, #15B9B9 0%, #3C1DFF 100%);
+  background: linear-gradient(180deg, ${theme.colors.accentSecondary}, ${theme.colors.accentPrimary});
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,5 +41,12 @@ const Circle = styled.div`
 `
 
 const OrganizationInfo = styled.div`
-
+max-width: 360px;
+`
+const OrganizationYear = styled.span`
+color: #E3E1E1;
+font-size: 17px;
+font-weight: 300;
+letter-spacing: 1px;
+text-transform: capitalize;
 `
