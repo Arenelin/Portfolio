@@ -1,9 +1,9 @@
 import myPhoto from '../../../assets/images/myPhoto.webp'
-import { Button } from '../../../components/Button'
 import { Container } from '../../../components/Container'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import styled from 'styled-components'
 import { theme } from '../../../styles/Theme'
+import { Button } from './button/Button'
 
 export function Main() {
    return (
@@ -14,7 +14,7 @@ export function Main() {
                   <MainGreeting>Welcome</MainGreeting>
                   <MainName>I am Nikita Akmaykin</MainName>
                   <MainTitle>A Frontend Developer</MainTitle>
-                  <Button>Download CV</Button>
+                  <Button text='Download CV'/>
                </MainInfo>
                <MainPhoto src={myPhoto} alt="Photo" />
             </FlexWrapper>
@@ -28,6 +28,7 @@ const StyledMain = styled.section`
 min-height: 100vh;
 display: flex;
 background-color: ${theme.colors.primaryBg};
+
 `
 const MainInfo = styled.div`
 
