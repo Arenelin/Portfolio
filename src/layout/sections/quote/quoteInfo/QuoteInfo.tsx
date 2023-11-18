@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { SectionTitle } from '../../../../components/SectionTitle'
+import { Icon } from '../../../../components/icon/Icon'
 
 type QuoteInfoPropsType = {
    title: string,
@@ -22,6 +23,7 @@ text-align: center;
 align-self: start;
 margin-bottom: 128px;
 margin-left: 17px;
+position: relative;
 `
 
 const Description = styled.p`

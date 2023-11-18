@@ -14,7 +14,8 @@ export function Projects() {
                  key={project.id}
                  src={project.src}
                  tech={project.tech}
-                 title={project.title} />
+                 title={project.title}
+                 descr={project.descr} />
            )}
         </FlexWrapper>
     </StyledProjects>

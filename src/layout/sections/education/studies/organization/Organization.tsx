@@ -33,7 +33,7 @@ const Circle = styled.div`
   border-radius: 50%;
   width: 96px;
   height: 96px;
-  background: linear-gradient(180deg, ${theme.colors.accentSecondary}, ${theme.colors.accentPrimary});
+  background-image: linear-gradient(180deg, ${theme.colors.accentSecondary}, ${theme.colors.accentPrimary});
   display: flex;
   justify-content: center;
   align-items: center;

@@ -52,7 +52,6 @@ font-weight: 600;
 const MainTitle = styled.h1`
 font-size: 27px;
 font-weight: 400;
-color: ${theme.colors.accentPrimary};
 margin-bottom: 25px;
 `
 

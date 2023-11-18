@@ -41,7 +41,7 @@ text-transform: capitalize;
 
 const Progress = styled.div`
 width: 100%;
-border: 1px solid ${theme.colors.font};
+border: 1px solid rgb(131, 129, 129);
 border-radius: 50px;
 height: 25px;
 margin-bottom: 20px;
@@ -50,6 +50,6 @@ margin-bottom: 20px;
 const ProgressLine = styled.div<{ percent: string }>`
 height: 100%;
 border-radius: 50px;
-background: linear-gradient(180deg, ${theme.colors.accentSecondary}, ${theme.colors.accentPrimary});
+background-image: linear-gradient(180deg, ${theme.colors.accentSecondary}, ${theme.colors.accentPrimary});
 max-width: ${props => props.percent};
 `

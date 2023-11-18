@@ -31,7 +31,7 @@ html, body {
   height: 100%;
   width: 100%;
   font-style: 100%;
-  line-height: 1;
+  line-height: 1.2;
   font-size: 14px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -42,6 +42,7 @@ button {
   cursor: pointer;
   background-color: unset;
   border: none;
+  color:${theme.colors.font};
 }
 
 button::-moz-focus-inner {
@@ -49,11 +50,12 @@ button::-moz-focus-inner {
   border: 0;
 }
 
-a, a:visited {
+a {
   text-decoration: none;
+  color: ${theme.colors.font};
 }
 
-a:hover {
+a:hover, a:visited {
   text-decoration: none;
 }
 

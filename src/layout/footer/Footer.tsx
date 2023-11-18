@@ -23,3 +23,5 @@ const Name = styled.span`
 const Copyright = styled.small`
 
 `
+
+//Добавить при наведении на иконку scale + свечение логотипа и надписей в блоке main + неоновые иконки на соцсети
