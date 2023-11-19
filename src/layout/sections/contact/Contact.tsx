@@ -17,7 +17,7 @@ export function Contact() {
             <Field placeholder='Your Message' as={'textarea'} />
             <Button type='submit'>Send Message</Button>
           </StyledForm>
-          <StyledMap>There will be a map here</StyledMap>
+          <Map src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2285.9423179489218!2d82.93432539976149!3d55.04422658528784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dfe5bfe121bcd7%3A0x9e1c5173df6eec85!2z0YPQuy4g0JPQvtCz0L7Qu9GPLCAzMSwg0J3QvtCy0L7RgdC40LHQuNGA0YHQuiwg0J3QvtCy0L7RgdC40LHQuNGA0YHQutCw0Y8g0L7QsdC7LiwgNjMwMDA1!5e0!3m2!1sru!2sru!4v1700367802620!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></Map>
         </FlexWrapper>
       </Container>
 
@@ -81,13 +81,13 @@ font-family: 'Poppins', sans-serif;
 }
 `
 
-const StyledMap = styled.div`
-color:#ffffff;
-flex-basis:500px;
-margin-bottom: 50px;
-min-height: 300px;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color:black;
+const Map = styled.iframe<{
+  allowfullscreen: string,
+  loading: string,
+  referrerpolicy: string
+}>`
+  border: 0;
+  width: 500px;
+  height: 340px;
+  margin-bottom: 50px;
 `
