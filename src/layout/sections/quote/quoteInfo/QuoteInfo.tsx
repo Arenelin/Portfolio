@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { SectionTitle } from '../../../../components/SectionTitle'
-import { Icon } from '../../../../components/icon/Icon'
+import QuoteSecond from '../../../../assets/images/QuoteSecond.svg'
+import QuoteFirst from '../../../../assets/images/QuoteFirst.svg'
 
 type QuoteInfoPropsType = {
    title: string,
@@ -8,10 +8,10 @@ type QuoteInfoPropsType = {
    author: string
 }
 
-export function QuoteInfo(props:QuoteInfoPropsType) {
+export function QuoteInfo(props: QuoteInfoPropsType) {
    return (
       <StyledQuoteInfo>
-         <SectionTitle>{props.title}</SectionTitle>
+         <QuoteTitle>{props.title}</QuoteTitle>
          <Description>{props.text}</Description>
          <Author>{props.author}</Author>
       </StyledQuoteInfo>
@@ -20,23 +20,47 @@ export function QuoteInfo(props:QuoteInfoPropsType) {
 
 const StyledQuoteInfo = styled.div`
 text-align: center;
-align-self: start;
-margin-bottom: 128px;
-margin-left: 17px;
 position: relative;
+
+&::after,
+&::before{
+content: '';
+display: inline-block;
+width: 193px;
+height: 161px;
+background-size: cover;
+position: absolute;
+}
+
+&::after{
+background-image: url(${QuoteFirst});
+top: -5px;
+left: -15px;
+}
+
+&::before{
+background-image: url(${QuoteSecond});
+bottom: -12px;
+right: -10px;
+}
+`
+const QuoteTitle = styled.h2`
+font-size: 100px;
+font-weight: 300;
+line-height: 150.023%;
+letter-spacing: -4.8px;
+text-transform: uppercase;
+padding-top: 20px;
+margin-bottom: 50px;
 `
 
 const Description = styled.p`
-color: #EAEAEA;
-font-size: 34px;
-font-style: normal;
+font-size: 28px;
 font-weight: 400;
 line-height: 174%; 
-padding: 0;
 max-width: 743px;
-margin: 0px auto 50px;
+margin: 0px auto 30px;
 `
 
 const Author = styled.span`
-color: #EAEAEA;
 `
