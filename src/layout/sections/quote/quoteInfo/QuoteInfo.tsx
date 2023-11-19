@@ -51,7 +51,6 @@ line-height: 150.023%;
 letter-spacing: -4.8px;
 text-transform: uppercase;
 padding-top: 20px;
-margin-bottom: 50px;
 `
 
 const Description = styled.p`
@@ -59,7 +58,7 @@ font-size: 28px;
 font-weight: 400;
 line-height: 174%; 
 max-width: 743px;
-margin: 0px auto 30px;
+margin: 50px auto 30px;
 `
 
 const Author = styled.span`

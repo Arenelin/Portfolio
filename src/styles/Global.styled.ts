@@ -65,5 +65,11 @@ ul li {
 
 section{
   padding: 60px 0px;
+  &:nth-child(odd){
+    background-color: ${theme.colors.secondaryBg};
+  }
+  &:nth-child(even){
+    background-color: ${theme.colors.primaryBg};
+  }
 }
 `
