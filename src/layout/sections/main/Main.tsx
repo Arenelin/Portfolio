@@ -48,6 +48,7 @@ font-family: 'Josefin Sans', 'sans-serif';
 font-size: 50px;
 margin-bottom: 15px;
 font-weight: 600;
+filter: drop-shadow(0 20px 50px #aaa1ff);
 `
 
 const MainTitle = styled.h1`
