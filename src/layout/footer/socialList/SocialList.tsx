@@ -17,7 +17,8 @@ export function SocialList() {
 
 const StyledSocialList = styled.ul`
 display: flex;
-gap: 30px;
+gap: 20px;
 justify-content: center;
+margin: 30px 0px;
 `
 

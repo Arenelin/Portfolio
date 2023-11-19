@@ -1,27 +1,31 @@
 import styled from 'styled-components'
 import { SocialList } from './socialList/SocialList'
+import { theme } from '../../styles/Theme'
 
 export function Footer() {
   return (
      <StyledFooter>
         <Name>Nikita</Name>
         <SocialList/>
-        <Copyright>© 2023 Nikita Akmaykin, All Rights Reserved.</Copyright>
+        <Copyright>© 2023 Nikita Akmaykin. All Rights Reserved.</Copyright>
     </StyledFooter>
   )
 }
 
 const StyledFooter = styled.footer`
-   background-color:#696969;
+   background-color: ${theme.colors.primaryBg};
    text-align: center;
+   padding: 40px 0;
 
 `
 
 const Name = styled.span`
-
+font-family: 'Josefin Sans', sans-serif;
+font-size: 22px;
+font-weight: 700;
+letter-spacing: 3px;
 `
 const Copyright = styled.small`
-
+opacity: 0.5;
+font-size: 12px;
 `
-
-//Добавить при наведении на иконку scale + свечение логотипа и надписей в блоке main + неоновые иконки на соцсети
