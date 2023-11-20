@@ -12,6 +12,23 @@ export const GlobalStyle = createGlobalStyle`
   border: 0;
 }
 
+*{
+  scrollbar-width: thin;
+  scrollbar-color: ${theme.colors.scrollBar.default} ${theme.colors.scrollBar.track};
+}
+
+*::-webkit-scrollbar{
+  width: 15px;
+}
+
+*::-webkit-scrollbar-thumb{
+  background-color: ${theme.colors.scrollBar.default};
+  border-radius: 25px;
+  &:hover{
+    background-color: ${theme.colors.scrollBar.hover};
+  }
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

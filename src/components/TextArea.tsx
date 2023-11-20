@@ -44,5 +44,8 @@ border-color: ${theme.colors.borderInput.focus};
 &:focus + label{
 color: ${theme.colors.label.focus};
 }
+&::-webkit-scrollbar{
+  width: 7px;
+}
 `
 

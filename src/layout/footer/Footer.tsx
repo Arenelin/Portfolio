@@ -1,22 +1,24 @@
 import styled from 'styled-components'
 import { SocialList } from './socialList/SocialList'
 import { theme } from '../../styles/Theme'
+import { Container } from '../../components/Container'
 
 export function Footer() {
-  return (
-     <StyledFooter>
-        <Name>Nikita</Name>
-        <SocialList/>
-        <Copyright>© 2023 Nikita Akmaykin. All Rights Reserved.</Copyright>
-    </StyledFooter>
-  )
+   return (
+      <StyledFooter>
+         <Container>
+            <Name>Nikita</Name>
+            <SocialList />
+            <Copyright>© 2023 Nikita Akmaykin. All Rights Reserved.</Copyright>
+         </Container>
+      </StyledFooter>
+   )
 }
 
 const StyledFooter = styled.footer`
-   background-color: ${theme.colors.primaryBg};
-   text-align: center;
-   padding: 40px 0;
-
+background-color: ${theme.colors.primaryBg};
+text-align: center;
+padding: 40px 0;
 `
 
 const Name = styled.span`

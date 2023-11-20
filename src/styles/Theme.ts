@@ -15,6 +15,12 @@ export const theme = {
       borderInput: {
          default: ' #4A4A4A',
          focus: '#ffffff'
+      },
+
+      scrollBar: {
+         default: '#9B90FB',
+         hover: '#6658F0',
+         track: '#ffffff'
       }
    }
 }
