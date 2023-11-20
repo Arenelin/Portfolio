@@ -5,6 +5,16 @@ export const theme = {
       accentPrimary: '#9B90FB',
       accentSecondary: '#6658F0',
 
-      font: '#ffffff'
+      font: '#ffffff',
+
+      label: {
+         default: '#ffffffb2',
+         focus: '#ffffff'
+      },
+
+      borderInput: {
+         default: ' #4A4A4A',
+         focus: '#ffffff'
+      }
    }
 }
