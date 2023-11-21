@@ -55,7 +55,6 @@ padding-top: 20px;
 
 const Description = styled.p`
 font-size: 28px;
-font-weight: 400;
 line-height: 174%; 
 max-width: 743px;
 margin: 50px auto 30px;

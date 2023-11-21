@@ -29,7 +29,6 @@ export function Contact() {
 
 const StyledContact = styled.section`
 text-align: center;
-background-color: ${theme.colors.secondaryBg};
 
 ${SectionTitle}{
   font-weight: 400;
@@ -52,19 +51,20 @@ align-items: center;
 gap: 40px;
 
 textarea{
-  margin-top: 20px;
-  height: 155px;
+margin-top: 20px;
+height: 155px;
 }
 
 ${Button}{
-  font-size: 20px;
-  padding: 10px 40px;
+font-size: 20px;
+padding: 10px 40px;
 }
 `
 
 const Map = styled.iframe<{ allowfullscreen: string, loading: string, referrerpolicy: string }>`
-  border: 0;
-  width: 500px;
-  height: 340px;
-  margin-bottom: 50px;
+border: 0;
+max-width: 500px;
+width: 100%;
+height: 340px;
+margin-bottom: 50px;
 `

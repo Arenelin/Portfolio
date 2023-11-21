@@ -27,7 +27,7 @@ font-size: 16px;
 
 const StyledTextArea = styled.textarea`
 resize: none;
-border-bottom: 2px solid ${theme.colors.borderInput.default};
+border-bottom: 2px solid ${theme.colors.borders.inputDefault};
 outline: none;
 width: 100%;
 background-color: transparent;
@@ -39,7 +39,7 @@ letter-spacing: 0.6px;
 font-family: 'Poppins', sans-serif;
 
 &:focus-visible{
-border-color: ${theme.colors.borderInput.focus};
+border-color: ${theme.colors.borders.inputFocus};
 }
 &:focus + label{
 color: ${theme.colors.label.focus};

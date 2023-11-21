@@ -9,7 +9,7 @@ export function About() {
       <StyledAbout>
          <Container>
             <FlexWrapper jc={'space-around'} ai={'center'}>
-               <AboutPhoto src={myPhoto} alt='Photo' />
+               <AboutPhoto src={myPhoto} alt='Portfolio owner photo' />
                <AboutInfo>
                   <AboutTitle>About me</AboutTitle>
                   <AboutDescription>Hello, I'm a front-end developer who combines a creative approach to solving non-standard problems <Accent>in team work</Accent>, deep technical knowledge and <Accent>a passion for front-end development.</Accent> My goal is to join a team where we can combine our efforts, experience and thinking to <Accent>turn any concept into a superior user experience.</Accent> 
@@ -22,18 +22,17 @@ export function About() {
 }
 
 const StyledAbout = styled.section`
-   background-color: #2B2A2A;
-   padding: 66px 0px 60px;
+
 `
 
 const AboutPhoto = styled.img`
-   max-width: 470px;
-   max-height: 518px;
-   object-fit: cover;
+max-width: 470px;
+max-height: 518px;
+object-fit: cover;
 `
 
 const AboutInfo = styled.div`
-   max-width: 521px;
+max-width: 521px;
 `
 
 const AboutTitle = styled.h2`
@@ -44,7 +43,6 @@ margin-bottom: 20px;
 `
 
 const AboutDescription = styled.p`
-font-weight: 400;
 letter-spacing: 2px;
 font-size: 16px;
 line-height: 28px;

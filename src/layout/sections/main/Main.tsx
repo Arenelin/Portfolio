@@ -16,7 +16,7 @@ export function Main() {
                   <MainTitle>A Frontend Developer</MainTitle>
                   <Button text='Download CV'/>
                </MainInfo>
-               <MainPhoto src={myPhoto} alt="Photo" />
+               <MainPhoto src={myPhoto} alt="Portfolio owner photo" />
             </FlexWrapper>
          </Container>
       </StyledMain>
@@ -27,16 +27,12 @@ export function Main() {
 const StyledMain = styled.section`
 min-height: 100vh;
 display: flex;
-background-color: ${theme.colors.primaryBg};
-
 `
 const MainInfo = styled.div`
 
 `
 
 const MainGreeting = styled.span`
-display: inline-block;
-margin-bottom: 20px;
 font-size: 22px;
 font-weight: 300;
 letter-spacing: 5px;
@@ -44,16 +40,15 @@ letter-spacing: 5px;
 
 const MainName = styled.h2`
 color: #FFF;
-font-family: 'Josefin Sans', 'sans-serif';
+font-family: 'Josefin Sans', sans-serif;
 font-size: 50px;
-margin-bottom: 15px;
+margin: 20px 0px 15px;
 font-weight: 600;
-filter: drop-shadow(0 20px 50px #aaa1ff);
+filter: drop-shadow(0 20px 50px ${theme.colors.shadow.primary});
 `
 
 const MainTitle = styled.h1`
 font-size: 27px;
-font-weight: 400;
 margin-bottom: 25px;
 `
 

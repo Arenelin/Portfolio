@@ -28,9 +28,7 @@ const MenuItem = styled.li`
 
 `
 const MenuLink = styled.a`
-color: #FFF;
 font-size: 20px;
-font-weight: 400;
 transition: color .4s;
 
 &:hover{

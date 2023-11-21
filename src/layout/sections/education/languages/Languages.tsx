@@ -17,5 +17,6 @@ export function Languages() {
 }
 
 const StyledLanguages = styled.div`
-  flex-basis: 488px;
+  max-width: 488px;
+  width: 100%;
 `

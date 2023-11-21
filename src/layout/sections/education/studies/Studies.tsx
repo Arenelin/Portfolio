@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { SectionTitle } from '../../../../components/SectionTitle'
 import { Organization } from './organization/Organization'
 import { FlexWrapper } from '../../../../components/FlexWrapper'
-import img from '../../../../assets/images/myPhoto.jpg';
 
 export function Studies() {
    return (
@@ -17,20 +16,6 @@ export function Studies() {
 }
 
 const StyledStudies = styled.div`
-   flex-basis: 478px;
-   /* position: relative; */
-      
-
-/* &::before{
-   content: '';
-  display: inline-block;
-  width: 300px;
-  height: 300px;
-  background-image: url(${img});
-  background-size: cover;
-  /* position: absolute;
-  top: 0;
-  right: 0; */
- 
+   max-width: 478px;
+   width: 100%;
 `
-

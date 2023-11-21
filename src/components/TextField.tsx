@@ -33,7 +33,7 @@ transition: .25s;
 `
 
 const StyledInput = styled.input`
-border-bottom: 2px solid ${theme.colors.borderInput.default};
+border-bottom: 2px solid ${theme.colors.borders.inputDefault};
 outline: none;
 width: 100%;
 background-color: transparent;
@@ -48,7 +48,7 @@ font-family: 'Poppins', sans-serif;
 opacity: 0;
 }
 &:focus-visible{
-border-color: ${theme.colors.borderInput.focus};
+border-color: ${theme.colors.borders.inputFocus};
 }
 &:focus + label,
 &:not(:placeholder-shown) + label{

@@ -14,7 +14,7 @@ margin-bottom: 80px;
    display: inline-block;
    width:175px;
    height: 1px;
-   background-color: ${theme.colors.accentPrimary};
+   background-color: ${theme.colors.decor.primary};
 
    position: absolute;
    left: 50%;

@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { theme } from "../../../../styles/Theme";
 
-
-export function Button(props: {text: string}) {
+export function Button(props: { text: string }) {
   return (
     <StyledButton>
       <span></span>
@@ -14,22 +13,20 @@ export function Button(props: {text: string}) {
   )
 }
 
- const StyledButton = styled.button`
-background-color: rgba(155, 144, 251, 0.2);
+const StyledButton = styled.button`
+background-color: ${theme.colors.buttonMain.bgc.default};
 padding: 20px 40px;
-color: #FFF;
 overflow: hidden;
 font-size: 25px;
-font-weight: 400;
 letter-spacing: 1.27px;
 -webkit-transform: translate(0%, 0%);
         transform: translate(0%, 0%);
--webkit-box-shadow: 0 20px 50px rgba(155, 144, 251, 0.5);
-box-shadow: 0 20px 50px rgba(155, 144, 251, 0.5);
+-webkit-box-shadow: 0 20px 50px ${theme.colors.buttonMain.shadow};
+box-shadow: 0 20px 50px ${theme.colors.buttonMain.shadow};
 transition: all .5s;
 
 &:hover{
-   background-color: rgba(155, 144, 251, 0.4);
+   background-color: ${theme.colors.buttonMain.bgc.hover};
 }
 
 & span{
@@ -41,8 +38,8 @@ transition: all .5s;
   left: 0px;
   width: 100%;
   height: 2px;
-  background: -webkit-gradient(linear, right top, left top, from(rgba(43, 8, 8, 0)), to(${theme.colors.accentPrimary}));
-  background: linear-gradient(to left, rgba(43, 8, 8, 0), ${theme.colors.accentPrimary});
+  background: -webkit-gradient(linear, right top, left top, from(rgba(43, 8, 8, 0)), to(${theme.colors.buttonMain.span}));
+  background: linear-gradient(to left, rgba(43, 8, 8, 0), ${theme.colors.buttonMain.span});
   -webkit-animation: 2s animateTop linear infinite;
           animation: 2s animateTop linear infinite;
 }
@@ -62,8 +59,8 @@ transition: all .5s;
   right: 0px;
   height: 100%;
   width: 2px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(43, 8, 8, 0)), to(${theme.colors.accentPrimary}));
-  background: linear-gradient(to top, rgba(43, 8, 8, 0), ${theme.colors.accentPrimary});
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(43, 8, 8, 0)), to(${theme.colors.buttonMain.span}));
+  background: linear-gradient(to top, rgba(43, 8, 8, 0), ${theme.colors.buttonMain.span});
   -webkit-animation: 2s animateRight linear -1s infinite;
           animation: 2s animateRight linear -1s infinite;
 }
@@ -84,8 +81,8 @@ transition: all .5s;
   left: 0px;
   width: 100%;
   height: 2px;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(43, 8, 8, 0)), to(${theme.colors.accentPrimary}));
-  background: linear-gradient(to right, rgba(43, 8, 8, 0), ${theme.colors.accentPrimary});
+  background: -webkit-gradient(linear, left top, right top, from(rgba(43, 8, 8, 0)), to(${theme.colors.buttonMain.span}));
+  background: linear-gradient(to right, rgba(43, 8, 8, 0), ${theme.colors.buttonMain.span});
   -webkit-animation: 2s animateBottom linear infinite;
           animation: 2s animateBottom linear infinite;
 }
@@ -106,8 +103,8 @@ transition: all .5s;
   left: 0px;
   height: 100%;
   width: 2px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 8, 8, 0)), to(${theme.colors.accentPrimary}));
-  background: linear-gradient(to bottom, rgba(43, 8, 8, 0), ${theme.colors.accentPrimary});
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 8, 8, 0)), to(${theme.colors.buttonMain.span}));
+  background: linear-gradient(to bottom, rgba(43, 8, 8, 0), ${theme.colors.buttonMain.span});
   -webkit-animation: 2s animateLeft linear -1s infinite;
           animation: 2s animateLeft linear -1s infinite;
 }

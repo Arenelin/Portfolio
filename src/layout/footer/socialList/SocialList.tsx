@@ -21,4 +21,3 @@ gap: 20px;
 justify-content: center;
 margin: 30px 0px;
 `
-

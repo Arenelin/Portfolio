@@ -33,7 +33,7 @@ const Circle = styled.div`
   border-radius: 50%;
   width: 96px;
   height: 96px;
-  background-image: linear-gradient(180deg, ${theme.colors.accentSecondary}, ${theme.colors.accentPrimary});
+  background-image: linear-gradient(180deg, ${theme.colors.studiesCircle.primary}, ${theme.colors.studiesCircle.secondary});
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,8 +43,9 @@ const Circle = styled.div`
 const OrganizationInfo = styled.div`
 max-width: 360px;
 `
+
 const OrganizationYear = styled.span`
-color: #E3E1E1;
+color: ${theme.colors.studiesYear};
 font-size: 17px;
 font-weight: 300;
 letter-spacing: 1px;

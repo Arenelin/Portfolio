@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import { Languages } from './languages/Languages'
 import { Studies } from './studies/Studies'
-import { theme } from '../../../styles/Theme'
 import { Container } from '../../../components/Container'
 
 export function Education() {
@@ -19,5 +18,5 @@ export function Education() {
 }
 
 const StyledEducation = styled.section`
-   background-color: ${theme.colors.secondaryBg};
+
 `

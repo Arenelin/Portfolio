@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { QuoteInfo } from './quoteInfo/QuoteInfo'
-import { theme } from '../../../styles/Theme'
 import { Container } from '../../../components/Container'
 
 export function Quote() {
@@ -17,5 +16,5 @@ export function Quote() {
 }
 
 const StyledQuote = styled.section`
-background-color: ${theme.colors.primaryBg};
+
 `

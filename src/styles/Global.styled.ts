@@ -38,6 +38,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: ${theme.colors.font};
   line-height: 1.2;
+  font-weight: 400;
 }
 
 nav, footer, header, aside {
@@ -82,6 +83,7 @@ ul li {
 
 section{
   padding: 60px 0px;
+  
   &:nth-child(odd){
     background-color: ${theme.colors.secondaryBg};
   }

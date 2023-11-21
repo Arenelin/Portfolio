@@ -23,8 +23,8 @@ justify-content: center;
 width: 45px;
 height: 45px;
 border-radius: 50%;
-background-color: rgba(255, 255, 255, 0.1);
-color: ${theme.colors.accentPrimary};
+background-color: ${theme.colors.socialLink.bgc};
+color: ${theme.colors.socialLink.font};
 transition: all .4s;
 animation: animate 3s linear infinite;
 text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff,
@@ -41,7 +41,7 @@ text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff,
 
 &:hover{
    transform: translateY(-4px) scale(1.4);
-   background-color: ${theme.colors.accentPrimary};
-   color: ${theme.colors.primaryBg};
+   background-color: ${theme.colors.socialLink.hover.bgc};
+   color: ${theme.colors.socialLink.hover.font};
 }
 `

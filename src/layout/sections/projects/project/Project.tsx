@@ -55,9 +55,9 @@ const ProjectInfo = styled.div`
 width: 100%;
 height: 100%;
 padding: 20px;
-border: 3px solid ${theme.colors.accentPrimary};
+border: 3px solid ${theme.colors.borders.cardProject};
 transition: transform .7s ease;
-background: rgba(155, 144, 251, 0.08);
+background-color: ${theme.colors.thirdBg};
 text-align: center;
 
 overflow: hidden;
@@ -70,7 +70,6 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: start;
-
 `
 
 const WrapperContent = styled.div`
@@ -91,7 +90,6 @@ const WrapperContent = styled.div`
 const InfoTitle = styled.h3`
 padding-top: 40px;
 font-size: 35px;
-margin-bottom: 25px;
 font-weight: 600;
 letter-spacing: 1.5px;
 text-transform: capitalize;
@@ -99,12 +97,12 @@ text-transform: capitalize;
 
 const InfoDescription = styled.p`
 font-size: 18px;
-margin-bottom: 25px;
+margin: 25px 0px;
 `
 
 const InfoStack = styled.p`
 font-size: 20px;
-color: #a39d9d;
+color: ${theme.colors.infoTechStackCardProject};
 margin-bottom: 35px;
 `
 
@@ -114,7 +112,7 @@ gap: 20px;
 
 ${Button}{
    background-image: none;
-   border: 1px solid ${theme.colors.accentPrimary};
+   border: 1px solid ${theme.colors.buttonCardProject.border};
    position: relative;
    border-radius: 0px;
    overflow: hidden;
