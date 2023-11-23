@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { theme } from "../../../../styles/Theme";
+import { font } from "../../../../styles/Common";
 
 export function Button(props: { text: string }) {
   return (
@@ -17,8 +18,7 @@ const StyledButton = styled.button`
 background-color: ${theme.colors.buttonMain.bgc.default};
 padding: 20px 40px;
 overflow: hidden;
-font-size: 25px;
-letter-spacing: 1.27px;
+${font({ Fmax: 25, Fmin: 20, ls: 1.27 })};
 -webkit-transform: translate(0%, 0%);
         transform: translate(0%, 0%);
 -webkit-box-shadow: 0 20px 50px ${theme.colors.buttonMain.shadow};
@@ -118,5 +118,9 @@ transition: all .5s;
     -webkit-transform: translateY(100%);
             transform: translateY(100%);
   }
+}
+
+@media ${theme.media.mobile}{ 
+    padding: 16px 32px; 
 }
 `
