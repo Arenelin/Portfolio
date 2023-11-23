@@ -46,7 +46,7 @@ margin-right: 26px;
 
 const MainGreeting = styled.span`
 display: inline-block;
-margin-top: 1em;
+margin-top: 2em;
 ${font({ Fmax: 22, Fmin: 17, fw: 300, ls: 5 })};
 `
 

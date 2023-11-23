@@ -3,12 +3,13 @@ import styled from 'styled-components'
 import myPhoto from '../../../assets/images/myPhoto.webp'
 import { Container } from '../../../components/Container'
 import { theme } from '../../../styles/Theme'
+import { font } from '../../../styles/Common'
 
 export function About() {
    return (
       <StyledAbout>
          <Container>
-            <FlexWrapper jc={'space-around'} ai={'center'}>
+            <FlexWrapper jc='space-around' ai={'center'}>
                <AboutPhoto src={myPhoto} alt='Frontend developer photo' />
                <AboutInfo>
                   <AboutTitle>About me</AboutTitle>
@@ -22,30 +23,47 @@ export function About() {
 }
 
 const StyledAbout = styled.section`
-
+@media screen and (max-width: 992px){
+   ${FlexWrapper}{
+      flex-wrap: wrap;
+      justify-content: space-around;
+   }
+   text-align: center;
+}
 `
 
 const AboutPhoto = styled.img`
-max-width: 470px;
-max-height: 518px;
+width: 470px;
+aspect-ratio: 1/1.1;
 object-fit: cover;
+
+@media ${theme.media.tablet}{ 
+       width: 400px; 
+    } 
+
+@media ${theme.media.mobile}{ 
+       width: 320px; 
+}
 `
 
 const AboutInfo = styled.div`
 max-width: 521px;
+margin-left: 26px;
+@media ${theme.media.tablet}{ 
+      margin: 0;
+    } 
 `
 
 const AboutTitle = styled.h2`
-font-size: 80px;
-font-weight: 600;
-letter-spacing: 4px;
+${font({ Fmax: 80, Fmin: 40, fw: 600, ls: 4 })};
 margin-bottom: 20px;
+@media screen and (max-width: 992px){
+  margin: 15px 0px 10px;
+}
 `
 
 const AboutDescription = styled.p`
-letter-spacing: 2px;
-font-size: 16px;
-line-height: 28px;
+${font({ Fmax: 16, Fmin: 14, ls: 2, lh: 28 })};
 `
 
 const Accent = styled.span`

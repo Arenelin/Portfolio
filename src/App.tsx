@@ -13,8 +13,8 @@ function App() {
         <div className="App">
             <Header />
              <Main />
-            {/* <About />
-            <Skills />
+             <About />
+           {/* <Skills />
             <Education />
             <Projects />
             <Quote />
