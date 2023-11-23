@@ -2,7 +2,7 @@ import myPhoto from '../../../assets/images/myPhoto.webp'
 import { Container } from '../../../components/Container'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import styled from 'styled-components'
-import { theme } from '../../../styles/Theme'
+import { responsiveFont, theme } from '../../../styles/Theme'
 import { Button } from './button/Button'
 
 export function Main() {
@@ -16,7 +16,7 @@ export function Main() {
                   <MainTitle>A Frontend Developer</MainTitle>
                   <Button text='Download CV'/>
                </MainInfo>
-               <MainPhoto src={myPhoto} alt="Portfolio owner photo" />
+               <MainPhoto src={myPhoto} alt="Frontend developer photo" />
             </FlexWrapper>
          </Container>
       </StyledMain>
@@ -39,9 +39,8 @@ letter-spacing: 5px;
 `
 
 const MainName = styled.h2`
-color: #FFF;
 font-family: 'Josefin Sans', sans-serif;
-font-size: 50px;
+${responsiveFont({fMax: 50, fMin: 16})};
 margin: 20px 0px 15px;
 font-weight: 600;
 filter: drop-shadow(0 20px 50px ${theme.colors.shadow.primary});
@@ -54,6 +53,7 @@ margin-bottom: 25px;
 
 const MainPhoto = styled.img`
    max-width: 566px;
-   max-height: 600px;
+   width: 100%;
+   height: 600px;
    object-fit: cover;
 `

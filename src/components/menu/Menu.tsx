@@ -16,12 +16,14 @@ export function Menu(props: { items: Array<string> }) {
 }
 
 const StyledMenu = styled.nav`
-
+@media ${theme.media.tablet}{
+   display: none;
+}
 `
 
 const MenuList = styled.ul`
 display: flex;
-gap: 30px;
+gap: 25px;
 `
 
 const MenuItem = styled.li`

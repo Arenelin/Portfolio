@@ -1,3 +1,14 @@
+
+
+type PropsType = {
+   fMax: number,
+   fMin: number
+}
+
+export const responsiveFont = ({fMax, fMin}: PropsType) =>`
+font-size: calc((100vw - 360px)/(1920 - 360) * (${fMax} - ${fMin}) + ${fMin}px);
+`
+
 export const theme = {
    colors: {
       primaryBg: '#1F1F1F',
@@ -78,5 +89,10 @@ export const theme = {
             font:'#1F1F1F'
          }
       }
+   },
+
+   media: {
+      tablet: 'screen and (max-width: 768px)',
+      mobile: 'screen and (max-width: 576px)',
    }
 }
