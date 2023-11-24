@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { QuoteInfo } from './quoteInfo/QuoteInfo'
 import { Container } from '../../../components/Container'
+import { theme } from '../../../styles/Theme'
 
 export function Quote() {
    return (
@@ -17,4 +18,7 @@ export function Quote() {
 
 const StyledQuote = styled.section`
 
+@media ${theme.media.mobile}{
+display: none;
+}
 `
