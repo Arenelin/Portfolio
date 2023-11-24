@@ -8,7 +8,7 @@ export function Education() {
    return (
       <StyledEducation>
          <Container>
-            <FlexWrapper jc='space-between'>
+            <FlexWrapper jc='space-between' wrap='wrap'>
                <Languages />
                <Studies />
             </FlexWrapper>
@@ -18,5 +18,9 @@ export function Education() {
 }
 
 const StyledEducation = styled.section`
-
+@media screen and (max-width: 992px){
+   ${FlexWrapper}{
+      justify-content: center;
+   }
+}
 `

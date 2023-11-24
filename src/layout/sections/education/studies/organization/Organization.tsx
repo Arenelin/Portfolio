@@ -27,12 +27,16 @@ const StyledOrganization = styled.div`
   align-items: center;  
   margin-bottom: 25px;
   width: 100%;
+
+  &:last-child{
+    margin: 0;
+  }
 `
 
 const Circle = styled.div`
   border-radius: 50%;
-  width: 96px;
-  height: 96px;
+  width: 90px;
+  height: 90px;
   background-image: linear-gradient(180deg, ${theme.colors.studiesCircle.primary}, ${theme.colors.studiesCircle.secondary});
   display: flex;
   justify-content: center;
@@ -41,7 +45,7 @@ const Circle = styled.div`
 `
 
 const OrganizationInfo = styled.div`
-max-width: 360px;
+max-width: 342px;
 `
 
 const OrganizationYear = styled.span`

@@ -30,6 +30,12 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 max-width: ${props => props.percent};
+margin-bottom: 10px;
+
+${EducationTitle}{
+   margin: 0;
+}
+
 ` 
 
 const LanguageLevel = styled.span`

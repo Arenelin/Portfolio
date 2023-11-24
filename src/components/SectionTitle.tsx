@@ -8,7 +8,7 @@ position: relative;
 text-align: center;
 margin-bottom: 80px;
 
-@media ${theme.media.mobile}{
+@media screen and (max-width: 992px){
      margin-bottom: 50px;
 }
 
