@@ -16,12 +16,6 @@ export function Studies() {
 }
 
 const StyledStudies = styled.div`
-   max-width: 460px;
+   max-width: 455px;
    width: 100%;
-
-   @media screen and (max-width: 992px){
-   ${SectionTitle}{
-      margin-top: 20px;
-   }
-}
 `

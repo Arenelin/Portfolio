@@ -20,7 +20,6 @@ export function Languages() {
 const StyledLanguages = styled.div`
   max-width: 488px;
   width: 100%;
-  margin-right: 15px;
 
   @media ${theme.media.tablet}{
     margin: 0;

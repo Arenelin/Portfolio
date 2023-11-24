@@ -9,7 +9,7 @@ export function About() {
    return (
       <StyledAbout>
          <Container>
-            <FlexWrapper jc='space-around' ai={'center'}>
+            <FlexWrapper jc='space-around' ai={'center'} gap='25px'>
                <AboutPhoto src={myPhoto} alt='Frontend developer photo' />
                <AboutInfo>
                   <AboutTitle>About me</AboutTitle>
@@ -48,7 +48,6 @@ object-fit: cover;
 
 const AboutInfo = styled.div`
 max-width: 521px;
-margin-left: 26px;
 @media ${theme.media.tablet}{ 
       margin: 0;
     } 
@@ -58,7 +57,7 @@ const AboutTitle = styled.h2`
 ${font({ Fmax: 80, Fmin: 40, fw: 600, ls: 4 })};
 margin-bottom: 20px;
 @media screen and (max-width: 992px){
-  margin: 15px 0px 10px;
+  margin-bottom: 5px;
 }
 `
 

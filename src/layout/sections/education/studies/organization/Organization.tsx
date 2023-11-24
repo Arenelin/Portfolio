@@ -45,7 +45,7 @@ const Circle = styled.div`
 `
 
 const OrganizationInfo = styled.div`
-max-width: 342px;
+max-width: 337px;
 `
 
 const OrganizationYear = styled.span`

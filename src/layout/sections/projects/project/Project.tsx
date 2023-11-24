@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { Button } from "../../../../components/Button"
 import { theme } from "../../../../styles/Theme"
+import { font } from "../../../../styles/Common"
 
 type ProjectPropsType = {
    src: string,
@@ -31,18 +32,20 @@ export function Project(props: ProjectPropsType) {
 }
 
 const StyledProject = styled.div`
-margin: 20px;
 `
 const ProjectImage = styled.div`
 width: 100%;
 height: 100%;
 overflow: hidden;
 position:absolute;
-transition: transform .7s ease;
+transition: transform 1s;
 backface-visibility: hidden;
 -webkit-backface-visibility: hidden;
 transform: perspective(800px) rotateY(0);
 border: 3px solid transparent;
+@media ${theme.media.tablet}{
+   animation: rotate-image 12s ease-in-out infinite;
+}
 `
 
 const Image = styled.img`
@@ -56,7 +59,7 @@ width: 100%;
 height: 100%;
 padding: 20px;
 border: 3px solid ${theme.colors.borders.cardProject};
-transition: transform .7s ease;
+transition: all 1s;
 background-color: ${theme.colors.thirdBg};
 text-align: center;
 
@@ -69,13 +72,50 @@ transform: perspective(800px) rotateY(180deg);
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: start;
+justify-content: center;
+transition: all 1s;
+@media ${theme.media.tablet}{
+ animation: rotate-info 12s ease-in-out infinite;
+}
+@media ${theme.media.mobile}{
+ padding: 10px;
+}
 `
 
 const WrapperContent = styled.div`
-   width: 602px;  
-   height: 452px;
+   width: 100%;
+   height: 100%;
    position: relative;
+
+   @keyframes rotate-image{
+      0%{
+         transform: rotateY(0deg);
+      }
+      30%{
+         transform: rotateY(180deg);
+      }
+      75%{
+         transform: rotateY(180deg);
+      }
+      100%{
+         transform: rotateY(0deg);
+      }
+   }
+
+   @keyframes rotate-info{
+      0%{
+         transform: rotateY(180deg);
+      }
+      30%{
+         transform: rotateY(0deg);
+      }
+      75%{
+         transform: rotateY(0deg);
+      }
+      100%{
+         transform: rotateY(180deg);
+      }
+   }
 
    &:hover{
    ${ProjectImage}{
@@ -88,22 +128,27 @@ const WrapperContent = styled.div`
 `
 
 const InfoTitle = styled.h3`
-padding-top: 40px;
-font-size: 35px;
-font-weight: 600;
-letter-spacing: 1.5px;
+${font({ Fmax: 35, Fmin: 30, fw: 600, ls: 1.5 })};
 text-transform: capitalize;
 `
 
 const InfoDescription = styled.p`
 font-size: 18px;
-margin: 25px 0px;
+margin: 20px 0px;
+
+@media ${theme.media.mobile}{
+   margin: 15px 0px;
+}
 `
 
 const InfoStack = styled.p`
-font-size: 20px;
-color: ${theme.colors.infoTechStackCardProject};
 margin-bottom: 35px;
+
+${font({ Fmax: 20, Fmin: 16, color: theme.colors.infoTechStackCardProject })};
+
+@media ${theme.media.mobile}{
+   margin-bottom: 15px;
+}
 `
 
 const WrapperButtons = styled.div`
@@ -141,5 +186,20 @@ ${Button}{
          left: 100%;
       }
    }
+@media ${theme.media.tablet}{
+      animation: shadow-btn 2s ease-in-out infinite alternate;
+}
+
+@keyframes shadow-btn{
+0%{
+   box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+   transform: translateY(0px);
+   
+}
+100%{
+   box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+   transform: translateY(10px);
+}
+}
    }
 `
