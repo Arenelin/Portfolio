@@ -1,13 +1,16 @@
 import styled from 'styled-components'
 import { theme } from '../styles/Theme'
+import { font } from '../styles/Common'
 
 export const SectionTitle = styled.h2`
-font-size: 56px;
-font-weight: 600;
-letter-spacing: 3px;
+${font({ Fmax: 56, Fmin: 40, fw: 600, ls: 3 })};
 position: relative;
 text-align: center;
 margin-bottom: 80px;
+
+@media ${theme.media.mobile}{
+     margin-bottom: 50px;
+}
 
 &::before{
    content: '';
@@ -20,5 +23,9 @@ margin-bottom: 80px;
    left: 50%;
    bottom: -20px;
    transform: translateX(-50%);
+   @media ${theme.media.mobile}{
+      bottom: -16px;
+      width: 150px;
+}
 }
 `

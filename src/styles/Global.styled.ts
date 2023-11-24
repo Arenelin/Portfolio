@@ -90,5 +90,9 @@ section{
   &:nth-child(even){
     background-color: ${theme.colors.primaryBg};
   }
+
+  @media ${theme.media.mobile}{
+    padding: 50px 0;
+  }
 }
 `
