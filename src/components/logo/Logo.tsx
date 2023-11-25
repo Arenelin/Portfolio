@@ -3,11 +3,18 @@ import { theme } from '../../styles/Theme'
 
 export function Logo() {
    return (
-      <a href="#">
+      <Link href="#">
          <LogoName>Nikita Akmaykin</LogoName>
-      </a>
+      </Link>
    )
 }
+
+const Link = styled.a`
+transition: all .5s;
+&:hover{
+   transform: scale(1.1);
+}
+`
 
 const LogoName = styled.span`
 color: ${theme.colors.accentPrimary};

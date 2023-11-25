@@ -12,18 +12,16 @@ function App() {
     return (
         <div className="App">
             <Header />
-             <Main />
-             <About />
+            <Main />
+            <About />
             <Skills />
             <Education />
-           <Projects />
+            <Projects />
             <Quote />
             <Contact />
-            {/*<Footer />  */}
+            <Footer />
         </div>
     );
 }
 
 export default App;
-
-//Попробовать сделать picture и вставлять так картинки

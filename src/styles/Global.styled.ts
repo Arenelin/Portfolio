@@ -39,6 +39,7 @@ body {
   color: ${theme.colors.font};
   line-height: 1.2;
   font-weight: 400;
+  min-width: 360px;
 }
 
 nav, footer, header, aside {
