@@ -6,13 +6,14 @@ import { theme } from '../../../styles/Theme'
 import { Container } from '../../../components/Container'
 import { TextField } from '../../../components/TextField'
 import { TextArea } from '../../../components/TextArea'
+import { font } from '../../../styles/Common'
 
 export function Contact() {
   return (
     <StyledContact>
       <Container>
         <SectionTitle>Send me a <span>message</span>, I will be touch with you shortly.</SectionTitle>
-        <FlexWrapper jc='space-around' ai='center'>
+        <FlexWrapper jc='space-around' ai='center' wrap='wrap' gap='40px'>
           <StyledForm action=''>
             <TextField id='userName' type='text' name='userName' labelText='Your Name' />
             <TextField id='userEmail' type='email' name='userEmail' labelText='Your Email Address' />
@@ -31,8 +32,7 @@ const StyledContact = styled.section`
 text-align: center;
 
 ${SectionTitle}{
-  font-weight: 400;
-  letter-spacing: 0;
+  ${font({ Fmax: 56, Fmin: 35, fw: 400, ls: 0 })};
   &::before{
     display: none;
   }
@@ -67,4 +67,8 @@ max-width: 500px;
 width: 100%;
 height: 340px;
 margin-bottom: 50px;
+
+ @media ${theme.media.mobile}{
+  display: none;
+}
 `

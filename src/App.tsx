@@ -18,8 +18,8 @@ function App() {
             <Education />
            <Projects />
             <Quote />
-            {/*<Contact />
-            <Footer />  */}
+            <Contact />
+            {/*<Footer />  */}
         </div>
     );
 }
