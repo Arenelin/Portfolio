@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components'
 import { theme } from '../../../styles/Theme'
 import { useState } from 'react'
 
-
 export function MobileMenu(props: { items: Array<string> }) {
    const [isOpen, setIsOpen] = useState(false);
 
@@ -20,7 +19,6 @@ export function MobileMenu(props: { items: Array<string> }) {
                )}
             </ul>
          </MobileMenuPopup>
-
       </StyledMobileMenu>
    )
 }
@@ -36,40 +34,35 @@ position: relative;
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
 position: absolute;
-width: 36px;
-height: 36px;
+width: 40px;
+height: 40px;
 right: 0;
-bottom: -10px;
+bottom: -12px;
 z-index: 99999;
-
+transition: all .25s;
 
    span{
       display: block;
       width: 100%;
-      height: 2px;
+      height: 5px;
       background-color: ${theme.colors.accentPrimary};
       position: absolute;
       top: 25px;
       left: 0;
-      transition: all .25s;
-
-
-      ${props => props.isOpen && css<{ isOpen: boolean }>`
-      background-color: rgba(255, 255, 255, 0);
-      `}
+      transition: transform .5s;
 
       &::before{
          content: '';
          width: 100%;
          position: absolute;
-         transform: translateY(-10px);
+         top: -14px;
          left: 0;
-         height: 2px;
+         height: 5px;
          background-color: ${theme.colors.accentPrimary};
-         transition: transform .25s;
+         transition: transform .5s;
 
          ${props => props.isOpen && css<{ isOpen: boolean }>`
-         transform: rotate(-45deg) translateY(0px) ;
+         transform: rotateZ(45deg) scaleX(0.75) translate(18px, -6px);
       `}
       }
 
@@ -77,14 +70,14 @@ z-index: 99999;
          content: '';
          width: 100%;
          position: absolute;
-         transform: translateY(10px);
-         height: 2px;
+         top: 14px;
+         height: 5px;
          left: 0;
          background-color: ${theme.colors.accentPrimary};
-         transition: transform .25s;
+         transition: transform .5s;
 
          ${props => props.isOpen && css<{ isOpen: boolean }>`
-         transform: rotate(45deg) translateY(0px) ;
+         transform: rotateZ(-45deg) scaleX(0.75) translate(18px, 6px);
       `}
       }
    }
@@ -92,12 +85,12 @@ z-index: 99999;
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
 position: fixed;
-background-color: rgba(54, 54, 55, 0.9);
+background-color: ${theme.colors.secondaryBg};
 top: 0;
 left: 0;
 right: 0;
 bottom: 0;
-z-index: 999;
+z-index: 99;
 display: none;
 
 ${props => props.isOpen && css<{ isOpen: boolean }>`
@@ -111,19 +104,14 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-gap: 25px;
+gap: 30px;
 }
 `
-
 
 const MenuItem = styled.li`
 
 `
-const MenuLink = styled.a`
-font-size: 20px;
-transition: color .4s;
 
-&:hover{
-   color: ${theme.colors.accentPrimary};
-}
+const MenuLink = styled.a`
+font-size: 25px;
 `

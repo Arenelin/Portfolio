@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { SectionTitle } from '../../../components/SectionTitle'
-import { FlexWrapper } from '../../../components/FlexWrapper'
 import { data } from './dataProjects/dataProjects'
 import { Project } from './project/Project'
 import { Container } from '../../../components/Container'
@@ -15,7 +14,9 @@ export function Projects() {
                {data.map(project =>
                   <Project
                      key={project.id}
-                     src={project.src}
+                     srcNative={project.srcNative}
+                     srcWebp={project.srcWebp}
+                     srcJpg={project.srcJpg}
                      tech={project.tech}
                      title={project.title}
                      descr={project.descr} />

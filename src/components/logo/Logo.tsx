@@ -11,6 +11,8 @@ export function Logo() {
 
 const Link = styled.a`
 transition: all .5s;
+position: relative;
+z-index: 100;
 &:hover{
    transform: scale(1.1);
 }

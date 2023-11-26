@@ -40,6 +40,7 @@ body {
   line-height: 1.2;
   font-weight: 400;
   min-width: 360px;
+  font-size: 14px;
 }
 
 nav, footer, header, aside {
@@ -50,7 +51,6 @@ html, body {
   height: 100%;
   width: 100%;
   font-style: 100%;
-  font-size: 14px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;

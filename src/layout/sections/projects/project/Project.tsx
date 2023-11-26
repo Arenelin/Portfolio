@@ -4,7 +4,9 @@ import { theme } from "../../../../styles/Theme"
 import { font } from "../../../../styles/Common"
 
 type ProjectPropsType = {
-   src: string,
+   srcNative: string,
+   srcWebp: string,
+   srcJpg: string,
    title: string,
    tech: string,
    descr: string,
@@ -15,7 +17,11 @@ export function Project(props: ProjectPropsType) {
       <StyledProject>
          <WrapperContent>
             <ProjectImage>
-               <Image src={props.src} alt="Project" />
+               <Picture>
+                  <source srcSet={props.srcWebp} type="image/webp" />
+                  <source srcSet={props.srcJpg} type="image/jpeg" />
+                  <img src={props.srcNative} alt="Frontend Project" />
+               </Picture>
             </ProjectImage>
             <ProjectInfo>
                <InfoTitle>{props.title}</InfoTitle>
@@ -48,10 +54,12 @@ border: 3px solid transparent;
 }
 `
 
-const Image = styled.img`
-object-fit: cover;
+const Picture = styled.picture`
+   img{
+   object-fit: cover;
 width: 100%;
-height: 100%;
+height: 100%;   
+   }
 `
 
 const ProjectInfo = styled.div`
