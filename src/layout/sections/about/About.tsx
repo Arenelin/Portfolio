@@ -18,7 +18,7 @@ export function About() {
                <Picture>
                   <source srcSet={`${myPhotoWebpLarge} 2x, ${myPhotoWebpMiddle} 1.5x, ${myPhotoWebpLittle} 1x`} type='image/webp' />
                   <source srcSet={`${myPhotoJpgLarge} 2x, ${myPhotoJpgMiddle} 1.5x, ${myPhotoJpgLittle} 1x`} type='image/jpeg' />
-                  <img src={myPhotoJpgLittle} alt="Frontend Developer " />
+                  <img src={myPhotoJpgLittle} alt="Frontend Developer" />
                </Picture>
                <AboutInfo>
                   <AboutTitle>About me</AboutTitle>
@@ -32,10 +32,10 @@ export function About() {
 }
 
 const StyledAbout = styled.section`
-@media screen and (max-width: 992px){
+
+@media ${theme.media.laptop}{
    ${FlexWrapper}{
       flex-wrap: wrap;
-      justify-content: space-around;
    }
    text-align: center;
 }
@@ -59,17 +59,11 @@ object-fit: cover;
 
 const AboutInfo = styled.div`
 max-width: 521px;
-@media ${theme.media.tablet}{ 
-      margin: 0;
-    } 
 `
 
 const AboutTitle = styled.h2`
 ${font({ Fmax: 80, Fmin: 40, fw: 600, ls: 4 })};
-margin-bottom: 20px;
-@media screen and (max-width: 992px){
-  margin-bottom: 5px;
-}
+margin-bottom: clamp(5px, -1.763rem + 3.35vw, 20px);
 `
 
 const AboutDescription = styled.p`

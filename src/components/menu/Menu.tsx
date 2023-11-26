@@ -16,6 +16,7 @@ export function Menu(props: { items: Array<string> }) {
 }
 
 const StyledMenu = styled.nav`
+
 @media ${theme.media.tablet}{
    display: none;
 }

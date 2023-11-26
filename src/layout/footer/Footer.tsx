@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { SocialList } from './socialList/SocialList'
 import { theme } from '../../styles/Theme'
 import { Container } from '../../components/Container'
-import { font } from '../../styles/Common'
 
 export function Footer() {
    return (

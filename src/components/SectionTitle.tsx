@@ -8,7 +8,7 @@ position: relative;
 text-align: center;
 margin-bottom: 80px;
 
-@media screen and (max-width: 992px){
+@media ${theme.media.laptop}{
      margin-bottom: 50px;
 }
 

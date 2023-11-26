@@ -17,7 +17,6 @@ export function Skill(props: SkillPropsType) {
 }
 
 const StyledSkill = styled.div`
-/* width:290px; */
 text-align: center;
 border: 3px solid ${theme.colors.borders.skill};
 padding: 20px 0;

@@ -62,7 +62,7 @@ padding-top: 20px;
 position: relative;
 z-index: 2;
 
-@media screen and (max-width: 992px){
+@media ${theme.media.laptop}{
    line-height: 150px;
 }
 

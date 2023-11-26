@@ -3,6 +3,7 @@ import { FlexWrapper } from '../../../components/FlexWrapper'
 import { Languages } from './languages/Languages'
 import { Studies } from './studies/Studies'
 import { Container } from '../../../components/Container'
+import { theme } from '../../../styles/Theme'
 
 export function Education() {
    return (
@@ -18,7 +19,7 @@ export function Education() {
 }
 
 const StyledEducation = styled.section`
-@media screen and (max-width: 992px){
+@media ${theme.media.laptop}{
    ${FlexWrapper}{
       justify-content: center;
    }

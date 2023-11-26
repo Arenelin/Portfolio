@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { SectionTitle } from '../../../components/SectionTitle'
-import { FlexWrapper } from '../../../components/FlexWrapper'
 import { Skill } from './skill/Skill'
 import { data } from '../skills/dataSkills/dataSkills'
 import { Container } from '../../../components/Container'
@@ -11,7 +10,6 @@ export function Skills() {
       <StyledSkills>
          <Container>
             <SectionTitle>Tech Stack</SectionTitle>
-            {/* <FlexWrapper wrap='wrap' gap='10px' jc='center'> */}
             <GridContainer>
                {data.map(skill =>
                   <Skill
@@ -20,15 +18,12 @@ export function Skills() {
                      title={skill.title} />
                )}
             </GridContainer>
-            {/* </FlexWrapper> */}
          </Container>
       </StyledSkills>
    )
 }
 
 const StyledSkills = styled.section`
-
-
 `
 
 const GridContainer = styled.div`
@@ -38,13 +33,13 @@ grid-auto-rows: 140px;
 gap: 10px;
 justify-content: space-evenly;
 
-@media screen and (max-width: 992px){
+@media ${theme.media.laptop}{
    grid-template-columns: repeat(3, minmax(240px,1fr));
 }
-@media ${theme.media.tablet}{
-   grid-template-columns: repeat(2, minmax(269px,320px));
+ @media ${theme.media.tablet}{
+    grid-template-columns: repeat(2, minmax(269px,320px)); 
 }
 @media ${theme.media.mobile}{
    grid-template-columns: repeat(1, minmax(269px,320px));
-}
+} 
 `

@@ -35,7 +35,6 @@ margin-bottom: 10px;
 ${EducationTitle}{
    margin: 0;
 }
-
 ` 
 
 const LanguageLevel = styled.span`

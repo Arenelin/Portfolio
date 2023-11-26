@@ -38,7 +38,7 @@ const StyledMain = styled.section`
 min-height: 100vh;
 display: flex;
 
-@media screen and (max-width: 992px){
+@media ${theme.media.laptop}{
    ${FlexWrapper}{
       justify-content: space-around;
       align-items: stretch;
@@ -47,9 +47,7 @@ display: flex;
 }
 `
 const MainInfo = styled.div`
-@media ${theme.media.tablet}{ 
-      margin: 0;
-    } 
+
 `
 
 const MainGreeting = styled.span`
@@ -70,6 +68,7 @@ margin-bottom: 25px;
 `
 
 const Picture = styled.picture`
+
 img{
   width: 502px;
    object-fit: cover;
@@ -82,18 +81,4 @@ img{
        width: 320px; 
     }   
 }
-   
-`
-
-const MainPhoto = styled.img`
-   width: 502px;
-   object-fit: cover;
-   aspect-ratio: 1/1.2;
-
-    @media ${theme.media.tablet}{ 
-       width: 400px; 
-    } 
-    @media ${theme.media.mobile}{ 
-       width: 320px; 
-    }
 `
