@@ -37,7 +37,7 @@ ${SectionTitle}{
     display: none;
   }
   & span{
-    color: ${theme.colors.accentSecondary};
+    color: ${theme.colors.accentColors.secondary};
   }
 }
 `

@@ -71,6 +71,6 @@ ${font({ PxMax: 16, PxMin: 14, ls: 2, lh: 28 })};
 `
 
 const Accent = styled.span`
-color: ${theme.colors.accentPrimary};
+color: ${theme.colors.accentColors.primary};
 font-weight: 600;
 `

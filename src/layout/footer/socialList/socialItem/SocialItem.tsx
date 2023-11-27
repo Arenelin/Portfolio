@@ -2,10 +2,10 @@ import styled from 'styled-components'
 import { Icon } from '../../../../components/icon/Icon'
 import { theme } from '../../../../styles/Theme'
 
-export function SocialItem(props:{iconId:string, ariaLabel: string}) {
+export function SocialItem(props:{iconId:string, ariaLabel: string, link:string}) {
   return (
      <StyledSocialItem role='listitem'> 
-        <SocialLink aria-label={props.ariaLabel} href='#'>
+        <SocialLink aria-label={props.ariaLabel} href={props.link}>
            <Icon iconId={props.iconId} w='21' h='21' viewBox='0 0 16 16'/>
         </SocialLink>
     </StyledSocialItem>

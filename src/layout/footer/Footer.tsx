@@ -16,7 +16,7 @@ export function Footer() {
 }
 
 const StyledFooter = styled.footer`
-background-color: ${theme.colors.primaryBg};
+background-color: ${theme.colors.sectionBackgrounds.primary};
 text-align: center;
 padding: 40px 0;
 `

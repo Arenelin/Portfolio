@@ -19,7 +19,10 @@ export function Projects() {
                      srcJpg={project.srcJpg}
                      tech={project.tech}
                      title={project.title}
-                     descr={project.descr} />
+                     descr={project.descr}
+                     linkGit={project.linkGit}
+                     linkDemo={project.linkDemo}
+                  />
                )}
             </GridContainer>
          </Container>

@@ -23,7 +23,7 @@ export function Header() {
 }
 
 const StyledHeader = styled.header`
-   background-color: ${theme.colors.primaryBg};
+   background-color: ${theme.colors.sectionBackgrounds.primary};
    padding: 25px 0px;
    position: fixed;
    top: 0;

@@ -31,12 +31,12 @@ export const GlobalStyle = createGlobalStyle`
 
 body {
   margin: 0;
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Poppins', -apple-system, BlinkMacSystemfont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: ${theme.colors.font};
+  color: ${theme.colors.fontsColors.general};
   line-height: 1.2;
   font-weight: 400;
   min-width: 360px;
@@ -60,7 +60,7 @@ button {
   cursor: pointer;
   background-color: unset;
   border: none;
-  color:${theme.colors.font};
+  color:${theme.colors.fontsColors.general};
 }
 
 button::-moz-focus-inner {
@@ -70,7 +70,7 @@ button::-moz-focus-inner {
 
 a {
   text-decoration: none;
-  color: ${theme.colors.font};
+  color: ${theme.colors.fontsColors.general};
   cursor: pointer;
 }
 
@@ -86,10 +86,10 @@ section{
   padding: 60px 0px;
   
   &:nth-child(odd){
-    background-color: ${theme.colors.secondaryBg};
+    background-color: ${theme.colors.sectionBackgrounds.secondary};
   }
   &:nth-child(even){
-    background-color: ${theme.colors.primaryBg};
+    background-color: ${theme.colors.sectionBackgrounds.primary};
   }
 
   @media ${theme.media.mobile}{

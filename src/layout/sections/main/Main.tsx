@@ -15,7 +15,7 @@ export function Main() {
    return (
       <StyledMain>
          <Container>
-            <FlexWrapper jc={'space-between'} ai={'center'} wrap='wrap-reverse' gap='25px'>
+            <FlexWrapper jc={'space-between'} ai={'center'} wrap='wrap-reverse' gap='26px'>
                <MainInfo>
                   <MainGreeting>Welcome</MainGreeting>
                   <MainName>I am Nikita Akmaykin</MainName>
@@ -69,7 +69,7 @@ margin-bottom: 25px;
 const Picture = styled.picture`
 
 img{
-  width: 502px;
+  width: 516px;
    object-fit: cover;
    aspect-ratio: 1/1.2;
 

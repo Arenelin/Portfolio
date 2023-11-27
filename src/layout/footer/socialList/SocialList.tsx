@@ -9,6 +9,7 @@ export function SocialList() {
             <SocialItem
                key={item.id}
                iconId={item.iconId}
+               link = {item.link}
                ariaLabel = {item.ariaLabel}
             />
             )}

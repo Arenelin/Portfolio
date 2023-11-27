@@ -10,6 +10,8 @@ type ProjectPropsType = {
    title: string,
    tech: string,
    descr: string,
+   linkGit: string,
+   linkDemo: string
 }
 
 export function Project(props: ProjectPropsType) {
@@ -28,8 +30,8 @@ export function Project(props: ProjectPropsType) {
                <InfoDescription>{props.descr}</InfoDescription>
                <InfoStack>Tech stack: {props.tech}</InfoStack>
                <WrapperButtons>
-                  <Button as={'a'} href='#'>Demo</Button>
-                  <Button as={'a'} href='#'>Code</Button>
+                  <Button as={'a'} href={props.linkDemo}>Demo</Button>
+                  <Button as={'a'} href={props.linkGit}>Code</Button>
                </WrapperButtons>
             </ProjectInfo>
          </WrapperContent>
@@ -72,7 +74,7 @@ height: 100%;
 padding: ${changeSize({PxMax: 20, PxMin: 10, Vmax: 1440, Vmin: 576})};
 border: 3px solid ${theme.colors.borders.cardProject};
 transition: all 1s;
-background-color: ${theme.colors.thirdBg};
+background-color: ${theme.colors.sectionBackgrounds.third};
 text-align: center;
 
 overflow: hidden;
@@ -152,7 +154,7 @@ margin: ${changeSize({PxMax: 20, PxMin: 15, Vmax: 1440, Vmin: 576})} 0px;
 
 const InfoStack = styled.p`
 margin-bottom: ${changeSize({PxMax: 35, PxMin: 15, Vmax: 1440, Vmin: 576})};
-${font({ PxMax: 20, PxMin: 16, color: theme.colors.infoTechStackCardProject})};
+${font({ PxMax: 20, PxMin: 16, color: theme.colors.fontsColors.infoTechStackCardProject})};
 `
 
 const WrapperButtons = styled.div`

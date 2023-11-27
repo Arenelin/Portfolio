@@ -1,12 +1,21 @@
 export const theme = {
    colors: {
-      primaryBg: '#1F1F1F',
-      secondaryBg: '#2B2A2A',
-      thirdBg: 'rgba(155, 144, 251, 0.08)',
-      accentPrimary: '#9B90FB',
-      accentSecondary: '#6658F0',
+      sectionBackgrounds: {
+         primary: '#1F1F1F',
+         secondary: '#2B2A2A',
+         third: 'rgba(155, 144, 251, 0.08)',
+      },
 
-      font: '#ffffff',
+      accentColors: {
+         primary: '#9B90FB',
+         secondary: '#6658F0',
+      },
+
+      fontsColors: {
+         general: '#ffffff',
+         studiesYear: '#E3E1E1',
+         infoTechStackCardProject: '#a39d9d',
+      },
 
       label: {
          default: '#ffffffb2',
@@ -46,10 +55,6 @@ export const theme = {
          secondary: '#9B90FB'
       },
 
-      studiesYear: '#E3E1E1',
-
-      infoTechStackCardProject: '#a39d9d',
-
       buttonMain: {
          bgc: {
             default: 'rgba(155, 144, 251, 0.2)',
@@ -75,7 +80,7 @@ export const theme = {
          font: '#9B90FB',
          hover: {
             bgc: '#9B90FB',
-            font:'#1F1F1F'
+            font: '#1F1F1F'
          }
       }
    },

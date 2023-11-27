@@ -49,7 +49,7 @@ max-width: 337px;
 `
 
 const OrganizationYear = styled.span`
-color: ${theme.colors.studiesYear};
+color: ${theme.colors.fontsColors.studiesYear};
 font-size: 17px;
 font-weight: 300;
 letter-spacing: 1px;

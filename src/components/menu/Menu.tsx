@@ -35,6 +35,6 @@ font-size: 20px;
 transition: color .4s;
 
 &:hover{
-   color: ${theme.colors.accentPrimary};
+   color: ${theme.colors.accentColors.primary};
 }
 `

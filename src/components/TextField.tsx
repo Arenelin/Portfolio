@@ -38,7 +38,7 @@ outline: none;
 width: 100%;
 background-color: transparent;
 padding: 7px 15px;
-color: ${theme.colors.font};
+color: ${theme.colors.fontsColors.general};
 font-size: 14px;  
 font-weight: 400;
 letter-spacing: 0.6px;

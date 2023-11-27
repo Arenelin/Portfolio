@@ -16,7 +16,7 @@ export const font = ({ ff, fw, color, lh, ls, PxMax, PxMin, Vmax, Vmin }: SizePr
 font-weight: ${fw || 400};
 font-family: ${ff || 'Poppins, sans-serif'};
 line-height: ${lh + 'px' || 1.2};
-color: ${color || theme.colors.font};
+color: ${color || theme.colors.fontsColors.general};
 letter-spacing: ${ls + 'px' || 0 + 'px'};
 font-size: ${changeSize({PxMax, PxMin, Vmax, Vmin})};
 `

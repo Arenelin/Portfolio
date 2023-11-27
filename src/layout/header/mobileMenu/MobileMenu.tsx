@@ -45,7 +45,7 @@ transition: all .25s;
       display: block;
       width: 100%;
       height: 5px;
-      background-color: ${theme.colors.accentPrimary};
+      background-color: ${theme.colors.accentColors.primary};
       position: absolute;
       top: 25px;
       left: 0;
@@ -58,7 +58,7 @@ transition: all .25s;
          top: -14px;
          left: 0;
          height: 5px;
-         background-color: ${theme.colors.accentPrimary};
+         background-color: ${theme.colors.accentColors.primary};
          transition: transform .5s;
 
          ${props => props.isOpen && css<{ isOpen: boolean }>`
@@ -73,7 +73,7 @@ transition: all .25s;
          top: 14px;
          height: 5px;
          left: 0;
-         background-color: ${theme.colors.accentPrimary};
+         background-color: ${theme.colors.accentColors.primary};
          transition: transform .5s;
 
          ${props => props.isOpen && css<{ isOpen: boolean }>`
@@ -85,7 +85,7 @@ transition: all .25s;
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
 position: fixed;
-background-color: ${theme.colors.secondaryBg};
+background-color: ${theme.colors.sectionBackgrounds.secondary};
 top: 0;
 left: 0;
 right: 0;
