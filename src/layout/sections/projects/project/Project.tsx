@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { Button } from "../../../../components/Button"
 import { theme } from "../../../../styles/Theme"
-import { font } from "../../../../styles/Common"
+import { changeSize, font } from "../../../../styles/Common"
 
 type ProjectPropsType = {
    srcNative: string,
@@ -49,6 +49,7 @@ backface-visibility: hidden;
 -webkit-backface-visibility: hidden;
 transform: perspective(800px) rotateY(0);
 border: 3px solid transparent;
+
 @media ${theme.media.tablet}{
    animation: rotate-image 12s ease-in-out infinite;
 }
@@ -65,7 +66,7 @@ height: 100%;
 const ProjectInfo = styled.div`
 width: 100%;
 height: 100%;
-padding: 20px;
+padding: ${changeSize({PxMax: 20, PxMin: 10, Vmax: 1440, Vmin: 576})};
 border: 3px solid ${theme.colors.borders.cardProject};
 transition: all 1s;
 background-color: ${theme.colors.thirdBg};
@@ -82,11 +83,9 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 transition: all 1s;
+
 @media ${theme.media.tablet}{
  animation: rotate-info 12s ease-in-out infinite;
-}
-@media ${theme.media.mobile}{
- padding: 10px;
 }
 `
 
@@ -136,27 +135,18 @@ const WrapperContent = styled.div`
 `
 
 const InfoTitle = styled.h3`
-${font({ Fmax: 35, Fmin: 30, fw: 600, ls: 1.5 })};
+${font({ PxMax: 35, PxMin: 30, fw: 600, ls: 1.5 })};
 text-transform: capitalize;
 `
 
 const InfoDescription = styled.p`
 font-size: 18px;
-margin: 20px 0px;
-
-@media ${theme.media.mobile}{
-   margin: 15px 0px;
-}
+margin: ${changeSize({PxMax: 20, PxMin: 15, Vmax: 1440, Vmin: 576})} 0px;
 `
 
 const InfoStack = styled.p`
-margin-bottom: 35px;
-
-${font({ Fmax: 20, Fmin: 16, color: theme.colors.infoTechStackCardProject })};
-
-@media ${theme.media.mobile}{
-   margin-bottom: 15px;
-}
+margin-bottom: ${changeSize({PxMax: 35, PxMin: 15, Vmax: 1440, Vmin: 576})};
+${font({ PxMax: 20, PxMin: 16, color: theme.colors.infoTechStackCardProject})};
 `
 
 const WrapperButtons = styled.div`
@@ -194,6 +184,7 @@ ${Button}{
          left: 100%;
       }
    }
+   
 @media ${theme.media.tablet}{
       animation: shadow-btn 2s ease-in-out infinite alternate;
 }

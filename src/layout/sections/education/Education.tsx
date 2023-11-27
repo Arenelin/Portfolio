@@ -19,6 +19,7 @@ export function Education() {
 }
 
 const StyledEducation = styled.section`
+
 @media ${theme.media.laptop}{
    ${FlexWrapper}{
       justify-content: center;

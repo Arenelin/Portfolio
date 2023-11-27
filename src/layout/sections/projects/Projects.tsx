@@ -36,11 +36,10 @@ const GridContainer = styled.div`
    grid-template-columns: repeat(2, minmax(362px, 607px));
    grid-auto-rows: 452px;
    gap: 15px;
-
+   justify-content: center;
 
    @media ${theme.media.tablet}{
       grid-template-columns: repeat(1, minmax(250px, 607px));
-      justify-content: center;
       grid-auto-rows: 402px;
    }
 `

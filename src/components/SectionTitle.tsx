@@ -1,31 +1,23 @@
 import styled from 'styled-components'
 import { theme } from '../styles/Theme'
-import { font } from '../styles/Common'
+import { changeSize, font } from '../styles/Common'
 
 export const SectionTitle = styled.h2`
-${font({ Fmax: 56, Fmin: 40, fw: 600, ls: 3 })};
+${font({ PxMax: 56, PxMin: 40, fw: 600, ls: 3 })};
 position: relative;
 text-align: center;
-margin-bottom: 80px;
-
-@media ${theme.media.laptop}{
-     margin-bottom: 50px;
-}
+margin-bottom: ${changeSize({PxMin: 50, PxMax: 80, Vmax: 1440, Vmin: 992})}; 
 
 &::before{
    content: '';
    display: inline-block;
-   width:175px;
+   width: ${changeSize({PxMax: 175, PxMin: 150, Vmax: 1440, Vmin: 576})}; 
    height: 1px;
    background-color: ${theme.colors.decor.primary};
 
    position: absolute;
    left: 50%;
-   bottom: -20px;
+   bottom: -18px;
    transform: translateX(-50%);
-   @media ${theme.media.mobile}{
-      bottom: -16px;
-      width: 150px;
-}
 }
 `

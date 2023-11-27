@@ -32,7 +32,7 @@ const StyledContact = styled.section`
 text-align: center;
 
 ${SectionTitle}{
-  ${font({ Fmax: 56, Fmin: 35, fw: 400, ls: 0 })};
+  ${font({ PxMax: 56, PxMin: 35, fw: 400, ls: 0 })};
   &::before{
     display: none;
   }

@@ -11,7 +11,7 @@ import { Footer } from './layout/footer/Footer';
 function App() {
     return (
         <div className="App">
-            <Header />
+            <Header /> 
             <Main />
             <About />
             <Skills />

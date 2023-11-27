@@ -8,7 +8,7 @@ import { FlexWrapper } from '../../../components/FlexWrapper'
 import styled from 'styled-components'
 import { Container } from '../../../components/Container'
 import { theme } from '../../../styles/Theme'
-import { font } from '../../../styles/Common'
+import { changeSize, font } from '../../../styles/Common'
 
 export function About() {
    return (
@@ -62,12 +62,12 @@ max-width: 521px;
 `
 
 const AboutTitle = styled.h2`
-${font({ Fmax: 80, Fmin: 40, fw: 600, ls: 4 })};
-margin-bottom: clamp(5px, -1.763rem + 3.35vw, 20px);
+${font({ PxMax: 80, PxMin: 40, fw: 600, ls: 4 })};
+margin-bottom: ${changeSize({ PxMax: 20, PxMin: 5})};
 `
 
 const AboutDescription = styled.p`
-${font({ Fmax: 16, Fmin: 14, ls: 2, lh: 28 })};
+${font({ PxMax: 16, PxMin: 14, ls: 2, lh: 28 })};
 `
 
 const Accent = styled.span`

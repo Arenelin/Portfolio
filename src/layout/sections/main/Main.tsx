@@ -52,18 +52,17 @@ const MainInfo = styled.div`
 
 const MainGreeting = styled.span`
 display: inline-block;
-${font({ Fmax: 22, Fmin: 17, fw: 300, ls: 5})}
+${font({ PxMax: 22, PxMin: 17, fw: 300, ls: 5})}
 `
 
 const MainName = styled.h2`
 margin: 20px 0px 15px;
-${font({ Fmax: 50, Fmin: 30, ff: "'Josefin Sans', sans-serif", fw: 600})}
+${font({ PxMax: 50, PxMin: 30, ff: "'Josefin Sans', sans-serif", fw: 600})}
 filter: drop-shadow(0 20px 50px ${theme.colors.shadow.primary});
 `
 
 const MainTitle = styled.h1`
-${font({ Fmax: 27, Fmin: 20 })}
-font-size: clamp(1.25rem, 1.104rem + 0.65vw, 1.688rem);
+${font({ PxMax: 27, PxMin: 20 })}
 margin-bottom: 25px;
 `
 
