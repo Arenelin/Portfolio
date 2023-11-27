@@ -5,8 +5,8 @@ import { theme } from '../styles/Theme'
 export const TextArea: React.FC<{ id: string, labelText: string }> = ({ id, labelText }) => {
    return (
       <WrapperTextArea>
-         <StyledTextArea id={id} />
-         <label htmlFor={id}>{labelText}</label>
+         <StyledTextArea id={id} placeholder={labelText} aria-placeholder={labelText}/>
+         <label htmlFor={id} aria-describedby={id}>{labelText}</label>
       </WrapperTextArea>
    )
 }
@@ -46,6 +46,9 @@ color: ${theme.colors.label.focus};
 }
 &::-webkit-scrollbar{
   width: 7px;
+}
+&::placeholder{
+opacity: 0;
 }
 `
 

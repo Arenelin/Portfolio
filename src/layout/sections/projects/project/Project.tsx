@@ -53,6 +53,9 @@ border: 3px solid transparent;
 @media ${theme.media.tablet}{
    animation: rotate-image 12s ease-in-out infinite;
 }
+@media (prefers-reduced-motion: reduce){
+   animation: unset;
+}
 `
 
 const Picture = styled.picture`
@@ -86,6 +89,9 @@ transition: all 1s;
 
 @media ${theme.media.tablet}{
  animation: rotate-info 12s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce){
+   animation: unset;
 }
 `
 

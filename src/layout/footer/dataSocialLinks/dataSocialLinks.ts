@@ -1,19 +1,23 @@
 export const data = [
    {
       id: 'rwejwpe',
-      iconId: 'githubSocial'
+      iconId: 'githubSocial',
+      ariaLabel: "Link to developer profile on GitHub"
    },
    {
       id: 'utiltuil',
-      iconId: 'linkedin'
+      iconId: 'linkedin',
+      ariaLabel: "Link to developer profile on Linkedin"
    },
    {
       id: 'w5235',
-      iconId: 'telegram'
+      iconId: 'telegram',
+      ariaLabel: "Link to developer profile on Telegram"
    },
    {
       id: 'rwejqetyyukwpe',
-      iconId: 'instagram'
+      iconId: 'instagram',
+      ariaLabel: "Link to the developer's profile on Instagram"
    },
 ]
 

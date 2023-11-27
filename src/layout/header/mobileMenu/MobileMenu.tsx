@@ -7,13 +7,13 @@ export function MobileMenu(props: { items: Array<string> }) {
 
    return (
       <StyledMobileMenu>
-         <BurgerButton onClick={() => setIsOpen((prev) => !prev)} isOpen={isOpen}>
+         <BurgerButton onClick={() => setIsOpen((prev) => !prev)} isOpen={isOpen} aria-label='Close button'>
             <span></span>
          </BurgerButton>
          <MobileMenuPopup isOpen={isOpen}>
-            <ul>
+            <ul role='menu'>
                {props.items.map((item) =>
-                  <MenuItem key={item}>
+                  <MenuItem key={item} role='menuitem'>
                      <MenuLink href='#'>{item}</MenuLink>
                   </MenuItem>
                )}

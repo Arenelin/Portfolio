@@ -4,9 +4,9 @@ import { theme } from '../../styles/Theme'
 export function Menu(props: { items: Array<string> }) {
    return (
       <StyledMenu>
-         <MenuList>
+         <MenuList role='menu'>
             {props.items.map((item) =>
-               <MenuItem key={item}>
+               <MenuItem key={item} role='menuitem'>
                   <MenuLink href='#'>{item}</MenuLink>
                </MenuItem>
             )}

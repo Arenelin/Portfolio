@@ -12,8 +12,8 @@ type TextFieldPropsType = {
 export const TextField: React.FC<TextFieldPropsType> = ({ id, labelText, type, name }) => {
    return (
       <StyledTextField>
-         <StyledInput type={type} id={id} placeholder={labelText} name={name} />
-         <label htmlFor={id}>{labelText}</label>
+         <StyledInput type={type} id={id} placeholder={labelText} name={name} aria-placeholder={labelText} />
+         <label htmlFor={id} aria-describedby={id}>{labelText}</label>
       </StyledTextField>
    )
 }

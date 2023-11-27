@@ -3,8 +3,8 @@ import { theme } from '../../styles/Theme'
 
 export function Logo() {
    return (
-      <Link href="#">
-         <LogoName>Nikita Akmaykin</LogoName>
+      <Link href="#" >
+         <LogoName aria-label='Top of page'>Nikita Akmaykin</LogoName>
       </Link>
    )
 }

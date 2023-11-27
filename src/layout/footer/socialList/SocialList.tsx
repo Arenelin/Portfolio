@@ -4,11 +4,12 @@ import { SocialItem } from './socialItem/SocialItem'
 
 export function SocialList() {
    return (
-      <StyledSocialList>
+      <StyledSocialList role='list'>
          {data.map(item =>
             <SocialItem
                key={item.id}
                iconId={item.iconId}
+               ariaLabel = {item.ariaLabel}
             />
             )}
       </StyledSocialList>
