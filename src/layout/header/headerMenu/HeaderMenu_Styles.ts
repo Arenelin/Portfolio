@@ -1,35 +1,24 @@
-import styled, { css } from 'styled-components'
-import { theme } from '../../../styles/Theme'
-import { useState } from 'react'
+import styled, { css } from "styled-components"
+import { theme } from "../../../styles/Theme"
 
-export function MobileMenu(props: { items: Array<string> }) {
-   const [isOpen, setIsOpen] = useState(false);
 
-   return (
-      <StyledMobileMenu>
-         <BurgerButton onClick={() => setIsOpen((prev) => !prev)} isOpen={isOpen} aria-label='Close button'>
-            <span></span>
-         </BurgerButton>
-         <MobileMenuPopup isOpen={isOpen}>
-            <ul role='menu'>
-               {props.items.map((item) =>
-                  <MenuItem key={item} role='menuitem'>
-                     <MenuLink href='#'>{item}</MenuLink>
-                  </MenuItem>
-               )}
-            </ul>
-         </MobileMenuPopup>
-      </StyledMobileMenu>
-   )
+//General styles for menu
+const MenuItem = styled.li`
+
+`
+const MenuLink = styled.a`
+font-size: 20px;
+transition: color .4s;
+
+&:hover{
+   color: ${theme.colors.accentColors.primary};
 }
+`
 
-const StyledMobileMenu = styled.nav`
-display: none;
+//Styles for Mobile Menu
+
+const MobileMenu = styled.nav`
 position: relative;
-
-@media ${theme.media.tablet}{
-   display: block;
-}
 `
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
@@ -105,13 +94,26 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 gap: 30px;
+& a{
+   font-size: 25px;
+}
 }
 `
 
-const MenuItem = styled.li`
+//Styles for Desktop Menu
 
+const DesktopMenu = styled.nav`
+ul{
+display: flex;
+gap: 25px;
+}
 `
 
-const MenuLink = styled.a`
-font-size: 25px;
-`
+export const S = {
+   MenuItem,
+   MenuLink,
+   MobileMenu,
+   BurgerButton,
+   MobileMenuPopup,
+   DesktopMenu
+}
