@@ -9,7 +9,7 @@ export function Education() {
    return (
       <StyledEducation>
          <Container>
-            <FlexWrapper jc='space-between' wrap='wrap' gap='20px'>
+            <FlexWrapper jc='space-between' wrap='wrap' gap='25px'>
                <Languages />
                <Studies />
             </FlexWrapper>

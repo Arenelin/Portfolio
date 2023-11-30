@@ -12,4 +12,3 @@ export const Menu: React.FC<{ items: Array<string> }> = (props: { items: Array<s
       </ul>
    )
 }
-

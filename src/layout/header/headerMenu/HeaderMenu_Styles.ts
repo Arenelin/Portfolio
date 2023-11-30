@@ -21,14 +21,17 @@ const MobileMenu = styled.nav`
 position: relative;
 `
 
-const BurgerButton = styled.button<{ isOpen: boolean }>`
+const BurgerButton = styled.button<{ isOpen: boolean, isInitialized: boolean  }>`
 position: absolute;
 width: 40px;
 height: 40px;
-right: 0;
+right: 0px;
 bottom: -12px;
 z-index: 99999;
-transition: all .25s;
+
+${props => !props.isOpen && props.isInitialized && css<{ isOpen: boolean, isInitialized: boolean }>`
+animation: showBurger 3s linear;
+`};
 
    span{
       display: block;
@@ -50,9 +53,9 @@ transition: all .25s;
          background-color: ${theme.colors.accentColors.primary};
          transition: transform .5s;
 
-         ${props => props.isOpen && css<{ isOpen: boolean }>`
+          ${props => props.isOpen && css<{ isOpen: boolean }>`
          transform: rotateZ(45deg) scaleX(0.75) translate(18px, -6px);
-      `}
+      `} 
       }
 
       &::after{
@@ -65,11 +68,81 @@ transition: all .25s;
          background-color: ${theme.colors.accentColors.primary};
          transition: transform .5s;
 
-         ${props => props.isOpen && css<{ isOpen: boolean }>`
+          ${props => props.isOpen && css<{ isOpen: boolean }>`
          transform: rotateZ(-45deg) scaleX(0.75) translate(18px, 6px);
-      `}
+      `} 
       }
    }
+
+@keyframes showBurger {
+   0%{
+      opacity: 0;
+   }
+   100%{
+      opacity: 1;
+   }
+}
+
+`
+
+const ArrowButton = styled.button<{ isOpen: boolean, isInitialized: boolean }>`
+position: absolute;
+width: 40px;
+height: 40px;
+right: 0px;
+bottom: -12px;
+opacity: 0;
+
+${props => !props.isOpen && props.isInitialized && css<{ isOpen: boolean }>`
+animation: runArrow .8s linear;
+`}
+
+   span{
+      display: block;
+      width: 100%;
+      height: 5px;
+      background-color: ${theme.colors.accentColors.primary};
+      position: absolute;
+      top: 25px;
+      left: 0;
+      transition: transform .5s;
+
+      &::before{
+         content: '';
+         width: 100%;
+         position: absolute;
+         top: -14px;
+         left: 0;
+         height: 5px;
+         background-color: ${theme.colors.accentColors.primary};
+         transform: rotateZ(45deg) scaleX(0.75) translate(18px, -6px);
+      }
+
+      &::after{
+         content: '';
+         width: 100%;
+         position: absolute;
+         top: 14px;
+         height: 5px;
+         left: 0;
+         background-color: ${theme.colors.accentColors.primary};
+         transform: rotateZ(-45deg) scaleX(0.75) translate(18px, 6px);
+      }
+   }
+
+@keyframes runArrow {
+0%{
+transform: translateX(0px);
+opacity: 1; 
+}
+80%{
+opacity: 1;
+}
+100%{
+transform: translateX(100px);
+opacity: 0;
+}
+}
 `
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
@@ -115,5 +188,6 @@ export const S = {
    MobileMenu,
    BurgerButton,
    MobileMenuPopup,
-   DesktopMenu
+   DesktopMenu,
+   ArrowButton
 }

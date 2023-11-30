@@ -29,7 +29,7 @@ const StyledSkills = styled.section`
 const GridContainer = styled.div`
 display: grid;
 grid-template-columns: repeat(4, minmax(233px, 1fr));
-grid-auto-rows: 140px;
+grid-auto-rows: 155px;
 gap: 10px;
 justify-content: space-evenly;
 
@@ -40,6 +40,6 @@ justify-content: space-evenly;
     grid-template-columns: repeat(2, minmax(269px,320px)); 
 }
 @media ${theme.media.mobile}{
-   grid-template-columns: repeat(1, minmax(269px,320px));
+   grid-template-columns: repeat(2, minmax(50%,320px));
 } 
 `

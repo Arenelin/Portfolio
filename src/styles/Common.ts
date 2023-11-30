@@ -28,5 +28,3 @@ export const changeSize = ({ PxMin, PxMax, Vmax = 1440, Vmin = 360 }: SizePropsT
 
    return `clamp(${PxMin}px, ${rem}rem + ${vw}vw, ${PxMax}px)`;
 }
-
-//font-size: calc((100vw - 360px)/(1440 - 360}) * (${PxMax} - ${PxMin}) + ${PxMin}px);

@@ -3,7 +3,7 @@ import { theme } from '../styles/Theme'
 import { changeSize, font } from '../styles/Common'
 
 export const SectionTitle = styled.h2`
-${font({ PxMax: 56, PxMin: 40, fw: 600, ls: 3 })};
+${font({ PxMin: 40, PxMax: 56,  fw: 600, ls: 3 })};
 position: relative;
 text-align: center;
 margin-bottom: ${changeSize({PxMin: 50, PxMax: 80, Vmax: 1440, Vmin: 992})}; 

@@ -23,7 +23,8 @@ export const Header: React.FC = () => {
          <Container>
             <FlexWrapper jc='space-between' ai='center'>
                <Logo />
-               {width <= breakpoint ? <MobileMenu items={menuItems} /> : <DesktopMenu items={menuItems} />}
+               {width <= breakpoint ? <MobileMenu items={menuItems} />
+                                    : <DesktopMenu items={menuItems} />}
             </FlexWrapper>
          </Container>
       </S.Header>

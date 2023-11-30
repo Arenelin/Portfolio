@@ -25,7 +25,7 @@ export function Main() {
                <Picture>
                   <source srcSet={`${myPhotoWebpLarge} 2x, ${myPhotoWebpMiddle} 1.5x, ${myPhotoWebpLittle} 1x`} type='image/webp'/>
                   <source srcSet={`${myPhotoJpgLarge} 2x, ${myPhotoJpgMiddle} 1.5x, ${myPhotoJpgLittle} 1x`} type='image/jpeg'/>
-                  <img src={myPhotoJpgLittle} alt="Frontend Developer" />
+                  <img src={myPhotoJpgLittle} alt="Frontend Developer" loading='lazy'/>
                </Picture>
             </FlexWrapper>
          </Container>
