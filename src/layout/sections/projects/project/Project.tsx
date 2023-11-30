@@ -1,6 +1,7 @@
 import { Button } from "../../../../components/Button"
 import React from "react"
 import { S } from "../Projects_Styles"
+import { AccentButton } from "../../../../components/AccentButton"
 
 type ProjectPropsType = {
    srcNative: string,
@@ -29,8 +30,10 @@ export const Project: React.FC<ProjectPropsType> = (props: ProjectPropsType) => 
                <S.InfoDescription>{props.descr}</S.InfoDescription>
                <S.InfoStack>Tech stack: {props.tech}</S.InfoStack>
                <S.WrapperButtons>
-                  <Button as={'a'} href={props.linkDemo}>Demo</Button>
-                  <Button as={'a'} href={props.linkGit}>Code</Button>
+                  {/* <Button as={'a'} href={props.linkDemo}>Demo</Button>
+                  <Button as={'a'} href={props.linkGit}>Code</Button> */}
+                  <AccentButton as={'a'} href={props.linkDemo}>Demo</AccentButton>
+                  <AccentButton as={'a'} href={props.linkGit}>Code</AccentButton>
                </S.WrapperButtons>
             </S.ProjectInfo>
          </S.WrapperContent>

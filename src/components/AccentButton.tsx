@@ -1,22 +1,10 @@
 import styled from "styled-components";
-import { theme } from "../../../../styles/Theme";
-import { changeSize, font } from "../../../../styles/Common";
+import { theme } from "../styles/Theme";
+import { changeSize, font } from "../styles/Common";
 
-export function Button(props: { text: string }) {
-  return (
-    <StyledButton>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      {props.text}
-    </StyledButton>
-  )
-}
-
-const StyledButton = styled.button`
+export const AccentButton = styled.button`
 background-color: ${theme.colors.buttonMain.bgc.default};
-padding:  ${changeSize({PxMax: 20, PxMin: 16, Vmax: 1440, Vmin: 576})} ${changeSize({PxMax: 40, PxMin: 32, Vmax: 1440, Vmin: 576})};  
+padding:  ${changeSize({ PxMax: 20, PxMin: 16, Vmax: 1440, Vmin: 576 })} ${changeSize({ PxMax: 40, PxMin: 32, Vmax: 1440, Vmin: 576 })};  
 overflow: hidden;
 ${font({ PxMax: 25, PxMin: 20, ls: 1.27 })};
 -webkit-transform: translate(0%, 0%);

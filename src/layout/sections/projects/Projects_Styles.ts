@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { theme } from "../../../styles/Theme"
 import { changeSize, font } from "../../../styles/Common"
-import { Button } from "../../../components/Button"
+import { AccentButton } from "../../../components/AccentButton"
 
 
 //Projects
@@ -146,7 +146,7 @@ const WrapperButtons = styled.div`
 display: flex;
 gap: 20px;
 
-${Button}{
+${AccentButton}{
    background-image: none;
    border: 1px solid ${theme.colors.buttonCardProject.border};
    position: relative;

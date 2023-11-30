@@ -14,6 +14,10 @@ display: flex;
    }
    text-align: center;
 }
+
+a{
+   display: inline-block;
+}
 `
 const MainInfo = styled.div`
 
