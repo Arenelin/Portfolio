@@ -1,22 +1,18 @@
-import styled from 'styled-components'
+import React from 'react'
 import { SectionTitle } from '../../../../components/SectionTitle'
 import { Language } from './language/Language'
+import { S } from './Languages_Styles'
 
-export function Languages() {
+export const Languages: React.FC = () => {
   return (
-     <StyledLanguages>
-        <SectionTitle>Languages</SectionTitle>
-        <Language name={'Russian'} 
-                  level={'Fluent'} 
-                  percent={'100%'} />
-        <Language name={'English'} 
-                  level={'Intermediate'} 
-                  percent={'50%'} />
-    </StyledLanguages>
+    <S.Languages>
+      <SectionTitle>Languages</SectionTitle>
+      <Language name={'Russian'}
+        level={'Fluent'}
+        percent={'100%'} />
+      <Language name={'English'}
+        level={'Intermediate'}
+        percent={'50%'} />
+    </S.Languages>
   )
 }
-
-const StyledLanguages = styled.div`
-  max-width: 488px;
-  width: 100%;
-`

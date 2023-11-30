@@ -1,25 +1,19 @@
-import styled from 'styled-components'
-import {data} from '../dataSocialLinks/dataSocialLinks'
+import { data } from '../dataSocialLinks/dataSocialLinks'
 import { SocialItem } from './socialItem/SocialItem'
+import { S } from '../Footer_Styles'
+import React from 'react'
 
-export function SocialList() {
+export const SocialList: React.FC = () => {
    return (
-      <StyledSocialList role='list'>
+      <S.SocialList role='list'>
          {data.map(item =>
             <SocialItem
                key={item.id}
                iconId={item.iconId}
-               link = {item.link}
-               ariaLabel = {item.ariaLabel}
+               link={item.link}
+               ariaLabel={item.ariaLabel}
             />
-            )}
-      </StyledSocialList>
+         )}
+      </S.SocialList>
    )
 }
-
-const StyledSocialList = styled.ul`
-display: flex;
-gap: 20px;
-justify-content: center;
-margin: 30px 0px;
-`

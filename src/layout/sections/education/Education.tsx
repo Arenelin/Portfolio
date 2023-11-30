@@ -1,28 +1,19 @@
-import styled from 'styled-components'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import { Languages } from './languages/Languages'
 import { Studies } from './studies/Studies'
 import { Container } from '../../../components/Container'
-import { theme } from '../../../styles/Theme'
+import { S } from './Education_Styles'
+import React from 'react'
 
-export function Education() {
+export const Education: React.FC = () => {
    return (
-      <StyledEducation>
+      <S.Education>
          <Container>
-            <FlexWrapper jc='space-between' wrap='wrap' gap='25px'>
+            <FlexWrapper jc='space-between' wrap='wrap' gap='25px' rowG='50px'>
                <Languages />
                <Studies />
             </FlexWrapper>
          </Container>
-      </StyledEducation>
+      </S.Education>
    )
 }
-
-const StyledEducation = styled.section`
-
-@media ${theme.media.laptop}{
-   ${FlexWrapper}{
-      justify-content: center;
-   }
-}
-`

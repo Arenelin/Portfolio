@@ -1,21 +1,16 @@
-import styled from 'styled-components'
 import { SectionTitle } from '../../../../components/SectionTitle'
 import { Organization } from './organization/Organization'
 import { FlexWrapper } from '../../../../components/FlexWrapper'
+import { S } from './Studies_Styles'
 
-export function Studies() {
+export const Studies: React.FC = () => {
    return (
-      <StyledStudies>
+      <S.Studies>
          <FlexWrapper ai='center' direction='column'>
             <SectionTitle>Studies</SectionTitle>
             <Organization name={'Medical College'} years={'2018-2022'} />
             <Organization name={'IT-INCUBATOR'} years={'2023-2024'} />
          </FlexWrapper>
-      </StyledStudies>
+      </S.Studies>
    )
 }
-
-const StyledStudies = styled.div`
-   max-width: 455px;
-   width: 100%;
-`

@@ -1,57 +1,23 @@
-import styled from 'styled-components'
 import { EducationTitle } from '../../EducationTitle'
 import { Icon } from '../../../../../components/icon/Icon'
-import { theme } from '../../../../../styles/Theme'
+import { S } from '../Studies_Styles'
+import React from 'react'
 
 type OrganizationPropsType = {
   name: string,
   years: string
 }
 
-export function Organization(props: OrganizationPropsType) {
+export const Organization: React.FC<OrganizationPropsType> = (props: OrganizationPropsType) => {
   return (
-    <StyledOrganization>
-      <Circle>
+    <S.Organization>
+      <S.Circle>
         <Icon iconId='study' w='35' h='35' viewBox='0 0 35 35' />
-      </Circle>
-      <OrganizationInfo>
+      </S.Circle>
+      <S.OrganizationInfo>
         <EducationTitle>{props.name}</EducationTitle>
-        <OrganizationYear>{props.years}</OrganizationYear>
-      </OrganizationInfo>
-    </StyledOrganization>
+        <S.OrganizationYear>{props.years}</S.OrganizationYear>
+      </S.OrganizationInfo>
+    </S.Organization>
   )
 }
-
-const StyledOrganization = styled.div`
-  display: flex;
-  align-items: center;  
-  margin-bottom: 25px;
-  width: 100%;
-
-  &:last-child{
-    margin: 0;
-  }
-`
-
-const Circle = styled.div`
-  border-radius: 50%;
-  width: 90px;
-  height: 90px;
-  background-image: linear-gradient(180deg, ${theme.colors.studiesCircle.primary}, ${theme.colors.studiesCircle.secondary});
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 22px;
-`
-
-const OrganizationInfo = styled.div`
-max-width: 337px;
-`
-
-const OrganizationYear = styled.span`
-color: ${theme.colors.fontsColors.studiesYear};
-font-size: 17px;
-font-weight: 300;
-letter-spacing: 1px;
-text-transform: capitalize;
-`

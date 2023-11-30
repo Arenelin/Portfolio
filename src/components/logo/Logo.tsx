@@ -1,26 +1,10 @@
-import styled from 'styled-components'
-import { theme } from '../../styles/Theme'
+import React from "react"
+import { S } from "./Logo_Styles"
 
-export function Logo() {
+export const Logo: React.FC = () => {
    return (
-      <Link href="#" >
-         <LogoName aria-label='Top of page'>Nikita Akmaykin</LogoName>
-      </Link>
+      <S.Link href="#" >
+         <S.LogoName aria-label='Top of page'>Nikita Akmaykin</S.LogoName>
+      </S.Link>
    )
 }
-
-const Link = styled.a`
-transition: all .5s;
-position: relative;
-z-index: 100;
-&:hover{
-   transform: scale(1.1);
-}
-`
-
-const LogoName = styled.span`
-color: ${theme.colors.accentColors.primary};
-font-family: 'Alex Brush', sans-serif;
-font-size: 32px;
-filter: drop-shadow(3px 6px 10px ${theme.colors.shadow.accent});
-`

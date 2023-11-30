@@ -1,16 +1,16 @@
-import styled from 'styled-components'
 import { SectionTitle } from '../../../components/SectionTitle'
 import { data } from './dataProjects/dataProjects'
 import { Project } from './project/Project'
 import { Container } from '../../../components/Container'
-import { theme } from '../../../styles/Theme'
+import React from 'react'
+import { S } from './Projects_Styles'
 
-export function Projects() {
+export const Projects: React.FC = () => {
    return (
-      <StyledProjects>
+      <S.Projects>
          <Container>
             <SectionTitle>Projects</SectionTitle>
-            <GridContainer>
+            <S.GridContainer>
                {data.map(project =>
                   <Project
                      key={project.id}
@@ -24,25 +24,8 @@ export function Projects() {
                      linkDemo={project.linkDemo}
                   />
                )}
-            </GridContainer>
+            </S.GridContainer>
          </Container>
-      </StyledProjects>
+      </S.Projects>
    )
 }
-
-const StyledProjects = styled.section`
-
-`
-
-const GridContainer = styled.div`
-   display: grid;
-   grid-template-columns: repeat(2, minmax(362px, 607px));
-   grid-auto-rows: 452px;
-   gap: 15px;
-   justify-content: center;
-
-   @media ${theme.media.tablet}{
-      grid-template-columns: repeat(1, minmax(250px, 607px));
-      grid-auto-rows: 402px;
-   }
-`

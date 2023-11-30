@@ -1,33 +1,15 @@
-import styled from 'styled-components'
 import { SocialList } from './socialList/SocialList'
-import { theme } from '../../styles/Theme'
 import { Container } from '../../components/Container'
+import { S } from './Footer_Styles'
 
-export function Footer() {
+export const Footer: React.FC = () => {
    return (
-      <StyledFooter>
+      <S.Footer>
          <Container>
-            <Name>Nikita</Name>
+            <S.Name>Nikita</S.Name>
             <SocialList />
-            <Copyright>© 2023 Nikita Akmaykin. All Rights Reserved.</Copyright>
+            <S.Copyright>© 2023 Nikita Akmaykin. All Rights Reserved.</S.Copyright>
          </Container>
-      </StyledFooter>
+      </S.Footer>
    )
 }
-
-const StyledFooter = styled.footer`
-background-color: ${theme.colors.sectionBackgrounds.primary};
-text-align: center;
-padding: 40px 0;
-`
-
-const Name = styled.span`
-font-family: 'Josefin Sans', sans-serif;
-font-size: 22px;
-font-weight: 700;
-letter-spacing: 3px;
-`
-const Copyright = styled.small`
-opacity: 0.5;
-font-size: 12px;
-`

@@ -5,7 +5,8 @@ type FlexWrapperPropsType = {
    jc?: string,
    ai?: string,
    wrap?: string,
-   gap?: string
+   gap?: string,
+   rowG?:string
 }
 
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
@@ -17,4 +18,5 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
    height: 100%;
    width: 100%;
    gap: ${props => props.gap || '0px'};
+   row-gap: ${props => props.rowG || '0px'};
 `
