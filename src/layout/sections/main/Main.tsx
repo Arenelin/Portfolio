@@ -19,7 +19,9 @@ export const Main: React.FC = () => {
                   <S.MainGreeting>Welcome</S.MainGreeting>
                   <S.MainName>I am Nikita Akmaykin</S.MainName>
                   <S.MainTitle>A Frontend Developer</S.MainTitle>
-                  <AccentButton href='https://github.com/zillomoons/my_portfolio/raw/master/dolzhit_ts_resume.pdf' as={'a'} target='_blank' rel='noreferrer' download>
+                  <AccentButton
+                     href='https://github.com/Arenelin/Portfolio/raw/main/Nikita_Akmaykin_CV.pdf'
+                     as={'a'} target='_blank' rel='noreferrer' download>
                      <span></span>
                      <span></span>
                      <span></span>
